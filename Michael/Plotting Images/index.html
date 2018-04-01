@@ -1,0 +1,206 @@
+<html>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+<p id="p1">
+  <div id="div1">
+    </svg>
+  </div>
+</p>
+
+
+<script>
+
+//Svg Dimensions
+var svg_height= 450
+var svg_width= 1200
+
+
+//Placeholder empty svg
+d3.select("#div1").append("svg")
+.attr("id", "weather_image")
+.attr("height", svg_height)
+.attr("width", svg_width)
+
+
+//Set of Scales
+var sqrt_scale= d3.scalePow()
+.exponent([0.5])
+
+var total_rain_linear= d3.scaleLinear()
+.domain([0, 100])
+.range([0, 1500])
+
+var rainy_day_quantile= d3.scaleQuantile()
+.domain([0, 5, 10, 15, 20, 25, 31])
+.range([0, 1, 2, 3, 4, 5])
+
+var avg_temp_linear= d3.scaleLinear()
+.domain([0, 100])
+.range([0, 2000])
+
+
+//For demo purposes
+var demo_array= [80, 30, 25,
+  40, 20, 40,
+  10, 5, 90,
+  75, 15, 70]
+
+
+var create_small_droplets= function(number_droplets, g_name) {
+  if (number_droplets > 0) {
+    g_name.append("circle")
+    .attr("r", 2)
+    .attr("cx", svg_width / 10)
+    .attr("cy", svg_height / 2.5)
+    .style("fill", "teal")
+  }
+
+  if (number_droplets > 1) {
+    g_name.append("circle")
+    .attr("r", 2)
+    .attr("cx", svg_width / 70)
+    .attr("cy", svg_height / 7.5)
+    .style("fill", "teal")
+  }
+
+  if (number_droplets > 2) {
+    g_name.append("circle")
+    .attr("r", 2)
+    .attr("cx", svg_width / 8)
+    .attr("cy", svg_height / 6)
+    .style("fill", "teal")
+  }
+
+  if (number_droplets > 3) {
+    g_name.append("circle")
+    .attr("r", 2)
+    .attr("cx", svg_width / 30)
+    .attr("cy", svg_height / 2.3)
+    .style("fill", "teal")
+  }
+
+  if (number_droplets > 4) {
+    g_name.append("circle")
+    .attr("r", 2)
+    .attr("cx", svg_width / 13)
+    .attr("cy", svg_height / 11)
+    .style("fill", "teal")
+  }
+}
+
+var update_weather_image= function(input_array) {
+
+  d3.select("#weather_image").remove();
+
+  var new_svg= d3.select("#div1").append("svg")
+  .attr("id", "weather_image")
+  .attr("height", svg_height)
+  .attr("width", svg_width)
+
+  //winter, first pane
+  var winter= new_svg.append("g")
+
+  //large water droplet
+  var winter_total_rain= winter.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+  winter_total_rain.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(total_rain_linear(input_array[0])))
+  .style("fill", "blue")
+
+  //multiple winter drops
+  create_small_droplets(rainy_day_quantile(input_array[1]), winter)
+
+  //sun icon
+  winter_avg_temp= winter.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+  winter_avg_temp.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(avg_temp_linear(input_array[2])))
+  .style("fill", "orange")
+
+  //SAME FOR THE REST OF THE SEASONS
+  var spring= new_svg.append("g")
+  .attr("transform", "translate (" + (svg_width / 4) + ", 0)")
+
+  var spring_total_rain= spring.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+  spring_total_rain.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(total_rain_linear(input_array[3])))
+  .style("fill", "blue")
+
+  create_small_droplets(rainy_day_quantile(input_array[4]), spring)
+
+  spring_avg_temp= spring.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+  spring_avg_temp.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(avg_temp_linear(input_array[5])))
+  .style("fill", "orange")
+
+  var summer= new_svg.append("g")
+  .attr("transform", "translate (" + (svg_width / 2) + ", 0)")
+
+  var summer_total_rain= summer.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+  summer_total_rain.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(total_rain_linear(input_array[6])))
+  .style("fill", "blue")
+
+  create_small_droplets(rainy_day_quantile(input_array[7]), summer)
+
+  summer_avg_temp= summer.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+  summer_avg_temp.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(avg_temp_linear(input_array[8])))
+  .style("fill", "orange")
+
+  var fall= new_svg.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 4) + ", 0)")
+
+  var fall_total_rain= fall.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+  fall_total_rain.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(total_rain_linear(input_array[9])))
+  .style("fill", "blue")
+
+  create_small_droplets(rainy_day_quantile(input_array[10]), fall)
+
+  fall_avg_temp= fall.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+  fall_avg_temp.append("g")
+  .attr("transform", "scale(1, 1)")
+  .append("circle")
+  .attr("r", sqrt_scale(avg_temp_linear(input_array[5])))
+  .style("fill", "orange")
+}
+
+update_weather_image(demo_array)
+
+//to be input by console for demo
+var newExample= [10, 20, 30, 20, 5, 60, 15, 20, 80, 20, 10, 60]
+
+</script>
+
+
+</html>
