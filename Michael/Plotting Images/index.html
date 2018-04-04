@@ -12,8 +12,8 @@
 <script>
 
 //Svg Dimensions
-var svg_height= 450
-var svg_width= 1200
+var svg_height= 300
+var svg_width= 900
 
 
 //Placeholder empty svg
@@ -129,7 +129,7 @@ var plot_barn= function(g_name) {
 
 var plot_single_droplet= function(g_name) {
   var inner_image= g_name.append("g")
-  .attr("transform", "scale (" + (.0000003 * (svg_height * svg_width / 2)) + "," + (.0000003 * (svg_height * svg_width / 2)) + ") translate (-250, -250)")
+  .attr("transform", "scale (" + (.0000002 * (svg_height * svg_width / 2)) + "," + (.0000002 * (svg_height * svg_width / 2)) + ") translate (-250, -250)")
 
   inner_image.append("path")
   .attr("d", "M118.607,215.185c-0.608-36.408,28.722-66.112,64.991-66.112c0.493,0,0.98,0.026,1.471,0.037  c5.257-32.388,24.424-60.094,51.158-76.836c-17.198-10.775-37.531-17.009-59.322-17.009c-55.652,0-101.796,40.632-110.434,93.845  c-0.491-0.011-0.977-0.037-1.471-0.037c-36.269,0-65.599,29.704-64.991,66.112c0.595,35.64,30.416,63.889,66.061,63.889h118.598  C149.022,279.074,119.202,250.825,118.607,215.185z")
@@ -239,7 +239,7 @@ var create_small_droplets= function(number_droplets, g_name) {
 
 var create_large_droplet= function(g_name) {
   var inner_image= g_name.append("g")
-  .attr("transform", "scale (.000000015, .000000015) translate (-258, -280)")
+  .attr("transform", "scale (.00000001, .00000001) translate (-258, -280)")
 
   inner_image.append("path")
   .attr("d", "M438.4,329.6C438.4,430.933,356.267,512,256,512S73.6,430.933,73.6,329.6S256,0,256,0  S438.4,229.333,438.4,329.6z")
@@ -252,7 +252,7 @@ var create_large_droplet= function(g_name) {
 
 var create_sun= function(g_name) {
   var inner_image= g_name.append("g")
-  .attr("transform", "scale (.00000003, .00000003) translate (-210, -210)")
+  .attr("transform", "scale (.00000002, .00000002) translate (-210, -210)")
 
   inner_image.append("polygon")
   .attr("points", "420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211    256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 20.762,301.144 44.226,247.858 0,210    44.226,172.143 20.762,118.855 77.074,104.014 79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789    340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142  ")
@@ -419,7 +419,7 @@ var update_weather_image= function(input_array) {
 update_weather_image(demo_array)
 
 //to be input by console for demo
-var newExample= [10, 20, 30, 20, 5, 60, 15, 20, 80, 20, 10, 60]
+var newExample= [10, 20, 30, 20, 5, 60, 15, 20, 80, 20, 10, 30]
 var newExample2= [30, 10, 40, 100, 30, 50, 80, 20, 80, 10, 6, 60]
 
 </script>
