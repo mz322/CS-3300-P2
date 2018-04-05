@@ -1,974 +1,986 @@
 {
    "Sonoma": [
       {
-         "year": 1996,
+         "1997": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 95,
-         "Merlot": 82,
-         "Pinot_Noir": 84,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah "
-      },
-      {
-         "year": 1997,
-         "Chardonnay": 95,
-         "Merlot": 86,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 86,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma’s Chardonnay had a monumental year; very ripe, opulent and complex. Its Pinot Noir is excellent, with ripe, forward wines. Rhone-style reds had excellent growing conditions this year."
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 86,
-         "Merlot": 79,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": 82,
-         "Comment": "blah"
+         "Comment": "Sonoma faced a year of lean wines; its Chardonnay and Pinot were austere. Rhone-style reds also faced a tough year."
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 81,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 85,
-         "Comment": "blah blah "
+         "Comment": "Sonoma’s Chardonnay is tops, with rich complex wines. It set the pace for Pinot in a cooler year, with ripe, fleshy wines. However, its Rhone-style reds are off the pace."
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": 80,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma’s Pinots were lean, crisp wines of good quality, with few stars, though its Chardonnays lack depth and completeness this year."
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 83,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 89,
-         "Comment": "blah"
+         "Comment": "Sonoma produced this year’s best Chardonnays; concentrated, with firm acidity. Pinots had a solid year with elegant, delicate, concentrated wines. Rhone-style reds were solid this year."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 99,
-         "Merlot": 81,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 89,
-         "Comment": "blah blah "
+         "Comment": "Sonoma’s Chardonnay was near perfect this year; sensational, fleshy, opulent wines. Very good Pinot Noir this year; dark, complex wines that have aged well. Tremendous Rhone-style reds as well; dark rich and plush."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 88,
-         "Merlot": 80,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": 90,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma’s Chardonnay are leaner, crisper wines than in '02 due to a challenging season, but some gems, too. Its Pinots are very good if mixed; the best are rich, supple and harmonious. Rhone-style reds are dark, intense, structured and concentrated this year."
+         }
       },
       {
-         "year": 2004,
+         "2004": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 99,
-         "Merlot": 88,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": 89,
-         "Comment": "blah"
+         "Comment": "Sonoma’s Chardonnay starts this year with ripe, rich opulent wines that rival 2002. Pinots had an excellent year; ripe, concentrated, deeply flavored wines. This is a superb vintage for Rhone-style reds."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 95,
-         "Merlot": 89,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah "
+         "Comment": "Sonoma’s Chardonnays are restrained wines; trim and tight, with higher acidity. Its Pinots are sleek, balanced and elegant; ripe at lower alcohol levels. Rhone-style reds are also high quality this year; Intense and structured."
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 85,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 95,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma’s Rhone-style reds are a golden vintage, fabulous across all regions, offering great diversity of styles. Chardonnay had a challenging harvest with mixed quality and fewer gems, but hardly a washout. Because of cool temps, Pinot Noir saw uneven ripening and some diluted wines."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 96,
-         "Merlot": 85,
          "Pinot_Noir": 95,
          "Rhone_Style_reds": 92,
-         "Comment": "blah"
+         "Comment": "Sonoma’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines. Rhone-style reds are of tremendous quality and uncommon complexity statewide; the best on record, along with 2009 and 2006. Similarly high quality, Chardonnay are ripe, complex, balanced and age-worthy wines; many brilliant bottles from all appellations."
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 91,
-         "Merlot": 85,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 91,
-         "Comment": "blah blah "
+         "Comment": "Sonoma’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines. Despite frost and fire, Chardonnay wasn’t spoiled, but quality is variable; tight, concentrated wines. A tough start ended with glorious Rhone-style reds statewide, rivaling 2007 for complexity, depth and finesse."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 95,
-         "Merlot": 86,
          "Pinot_Noir": 97,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma’s Chardonnay had a cooler year showing toned-down ripeness, with more finesse and delicacy. Its Pinot was almost perfect, with scores of ripe, polished, deeply flavored wines. Despite a challenging season, Rhone-style reds were fabulous."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 84,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": 93,
-         "Comment": "blah"
+         "Comment": "In Sonoma, a cool year resulted in uneven quality; the best Chardonnay are tight and concentrated. Pinot Noir are generally strong and structured. The cool, late harvest also resulted in amazingly ripe and full-bodied Rhone-style reds."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": 83,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah "
+         "Comment": "Sonoma’s conditions were cool and damp, challenging everywhere; best Chardonnay are elegant and scaled back. Rain wreaked havoc at harvest, resulting in lighter Pinot of uneven quality. Off the pace of best years, there are pockets of success in the Rhone-style reds."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 93,
-         "Merlot": 89,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": 92,
-         "Comment": "blah blah blah "
+         "Comment": "Sonoma had an ideal growing season; Chardonnay are intense, with pure, ripe, vibrant flavors. Record-size crop with atypically firm and structured Pinot Noir. Rhone-style red are firmly tannic wines and some real beauties from this year; should reward time in the cellar"
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 93,
-         "Merlot": 88,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": 93,
-         "Comment": "blah"
+         "Comment": "Sonoma had a year of age-worthy wine. Chardonnay had an exceptional year, distinct for vibrancy and density. Another huge crop of uniformly exceptional quality for Pinot Noir; slow to open. Rhone-style red are expressive early but show aging potential."
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 89,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": 94,
-         "Comment": "blah blah "
-      },
-      {
-         "year": 2015,
-         "Chardonnay": 90,
-         "Merlot": null,
-         "Pinot_Noir": 93,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "In Sonoma, drought produced a spartan crop for Chardonnay; fine quality, with yields the only disappointment. However, there were even higher yields of Pinot Noir than 2013, with fleshy, forward and showy wines; many approachable now. Rhone-style reds were similar to the 2013s this year, but more ripe, and more full-bodied."
+         }
       }
    ],
    "Napa": [
       {
-         "year": 1996,
-         "Chardonnay": 95,
-         "Merlot": 88,
-         "Pinot_Noir": null,
-         "Rhone_Style_reds": null,
-         "Comment": "blah"
-      },
-      {
-         "year": 1997,
+         "1997": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 96,
-         "Merlot": 86,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
-         "Comment": "blah blah "
+         "Comment": "Napa’s Chardonnay had a monumental year; very ripe, opulent and complex. Its Rhone-style red had excellent growing conditions, where Syrah rivaled Cabernet in a grand year"
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 84,
-         "Merlot": 82,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah blah "
+         "Comment": "Napa faced a year of lean wines; its Chardonnay was austere. Rhone-style reds also faced a tough year."
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah"
+         "Comment": "Napa’s Rhone-style reds have great density and structure. "
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": 83,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah "
+         "Comment": "Napa’s Rhone-style reds are strong this year, showing that Syrah doesn't always run with Cabernet. Its Chardonnays lack depth and completeness this year. "
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
-         "Comment": "blah blah blah "
+         "Comment": "Napa’s Rhone-style reds had an edge this year; intense and concentrated wines."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 96,
-         "Comment": "blah"
+         "Comment": "Napa’s Chardonnay was strong this year. Tremendous Rhone-style reds as well; dark rich and plush."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": 85,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 90,
-         "Comment": "blah blah "
+         "Comment": "Napa’s Chardonnay are leaner, crisper wines than in '02 due to a challenging season, but some gems, too. Its Rhone-style reds are dark, intense, structured and concentrated this year."
+         }
       },
       {
-         "year": 2004,
+         "2004": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
-         "Comment": "blah blah blah "
+         "Comment": "Napa’s Rhone-style reds are particularly superb this year, with concentrated, intense and complex wines."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
-         "Comment": "blah"
+         "Comment": "Napa’s Chardonnays are restrained wines; trim and tight, with higher acidity. Its Rhone-style reds are also high quality this year; Intense and structured."
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 88,
-         "Merlot": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah "
+         "Comment": "Napa’s Rhone-style reds are a golden vintage, fabulous across all regions, offering great diversity of styles. Chardonnay had a challenging harvest with mixed quality and fewer gems, but hardly a washout."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 95,
-         "Merlot": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 95,
-         "Comment": "blah blah blah "
+         "Comment": "Napa’s Rhone-style reds are of tremendous quality and uncommon complexity statewide; the best on record, along with 2009 and 2006. Similarly high quality, Chardonnay are ripe, complex, balanced and age-worthy wines; many brilliant bottles from all appellations."
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 91,
-         "Comment": "blah"
+         "Comment": "In Napa, despite frost and fire, Chardonnay wasn’t spoiled, but quality is variable; tight, concentrated wines. A tough start ended with glorious Rhone-style reds statewide, rivaling 2007 for complexity, depth and finesse."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 94,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
-         "Comment": "blah blah "
+         "Comment": "Napa’s Chardonnay had a cooler year showing toned-down ripeness, with more finesse and delicacy. Despite a challenging season, Rhone-style reds were fabulous."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah blah "
+         "Comment": "In Napa, a cool year resulted in uneven quality; the best Chardonnay are tight and concentrated. This weather also resulted in amazingly ripe and full-bodied Rhone-style reds."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
-         "Comment": "blah"
+         "Comment": "Napa’s conditions were cool and damp, challenging everywhere; best Chardonnay are elegant and scaled back. Off the pace of best years, there are pockets of success in the Rhone-style reds."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 94,
-         "Merlot": 91,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah "
+         "Comment": "Napa had an ideal growing season; Chardonnay are intense, with pure, ripe, vibrant flavors. Rhone-style red are firmly tannic wines and some real beauties from this year; should reward time in the cellar"
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 93,
-         "Merlot": 90,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
-         "Comment": "blah blah blah "
+         "Comment": "Napa had a year of age-worthy wine. Chardonnay had an exceptional year, distinct for vibrancy and density. Rhone-style red are expressive early but show aging potential."
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Chardonnay, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
-         "Comment": "blah"
-      },
-      {
-         "year": 2015,
-         "Chardonnay": 88,
-         "Merlot": null,
-         "Pinot_Noir": null,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "In Napa, drought produced a spartan crop for Chardonnay; fine quality, with yields the only disappointment. Rhone-style reds were similar to the 2013s this year, but more ripe, and more full-bodied."
+         }
       }
    ],
    "Santa Barbara": [
       {
-         "year": 1996,
-         "Chardonnay": 98,
-         "Merlot": null,
-         "Pinot_Noir": 81,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
-      },
-      {
-         "year": 1997,
+         "1997": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 96,
-         "Merlot": null,
          "Pinot_Noir": 82,
          "Rhone_Style_reds": 86,
-         "Comment": "blah"
+         "Comment": "Santa Barbara’s Chardonnay had a monumental year; very ripe, opulent and complex. Its Pinot Noir had a leaner year, but Rhone-style reds had a year of good growing conditions."
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 83,
-         "Merlot": null,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 82,
-         "Comment": "blah blah "
+         "Comment": "Santa Barbara faced a year of lean wines its Chardonnay and Pinot were austere, and its Rhone-style reds also faced a tough year."
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 93,
-         "Merlot": null,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 86,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Barbara’s Chardonnay is tops, with rich complex wines. However, its Rhone-style reds are off the pace."
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 86,
-         "Merlot": null,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 85,
-         "Comment": "blah"
+         "Comment": "Santa Barbara’s Pinots were lean, crisp wines of good quality, with few stars, though its Chardonnays lack depth and completeness this year."
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah "
+         "Comment": "Santa Barbara’s Chardonnays were concentrated, with firm acidity this year. Pinots had a solid year with elegant, delicate, concentrated wines."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 92,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 85,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Barbara’s Chardonnays were sensational, fleshy, opulent wines. Its Pinots are very good; dark, complex wines that have aged well."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 88,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 89,
-         "Comment": "blah"
+         "Comment": "Santa Barbara’s Chardonnay are leaner, crisper wines than in '02 due to a challenging season, but some gems, too. Its Pinots are very good if mixed; the best are rich, supple and harmonious. Rhone-style reds are dark, intense, structured and concentrated this year."
+         }
       },
       {
-         "year": 2004,
+         "2004": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": 86,
-         "Comment": "blah blah "
+         "Comment": "Santa Barbara’s Pinot Noirs had an excellent year; warm, early year, with ripe, concentrated, deep flavors. This is a superb vintage for Rhone-style reds."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 86,
-         "Merlot": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 89,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Barbara’s Chardonnays are restrained wines; trim and tight, with higher acidity. Its Pinots are sleek, balanced and elegant; ripe at lower alcohol levels. Rhone-style reds are also high quality this year; Intense and structured."
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 82,
-         "Merlot": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": 94,
-         "Comment": "blah"
+         "Comment": "Santa Barbara’s Rhone-style reds are a golden vintage, fabulous across all regions, offering great diversity of styles. Chardonnay had a challenging harvest with mixed quality and fewer gems, but hardly a washout. Because of cool temps, Pinot Noir saw uneven ripening and some diluted wines."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 89,
-         "Merlot": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 95,
-         "Comment": "blah blah "
+         "Comment": "Santa Barbara’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines. Rhone-style reds are of tremendous quality and uncommon complexity statewide; the best on record, along with 2009 and 2006. Similarly high quality, Chardonnay are ripe, complex, balanced and age-worthy wines; many brilliant bottles from all appellations. "
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 86,
-         "Merlot": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 91,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Barbara’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines. Despite frost and fire, Chardonnay wasn’t spoiled, but quality is variable; tight, concentrated wines. A tough start ended with glorious Rhone-style reds statewide, rivaling 2007 for complexity, depth and finesse."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 91,
-         "Merlot": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": 92,
-         "Comment": "blah"
+         "Comment": "Santa Barbara’s Chardonnay had a cooler year showing toned-down ripeness, with more finesse and delicacy. Its Pinot was almost perfect, with scores of ripe, polished, deeply flavored wines. Despite a challenging season, Rhone-style reds were fabulous."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah "
+         "Comment": "In Santa Barbara, a cool year resulted in uneven quality; the best Chardonnay are tight and concentrated. Pinot Noir are generally strong and structured. The cool, late harvest also resulted in amazingly ripe and full-bodied Rhone-style reds."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 85,
-         "Merlot": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Barbara’s conditions were cool and damp, challenging everywhere; best Chardonnay are elegant and scaled back. Rain wreaked havoc at harvest, resulting in lighter Pinot of uneven quality. Off the pace of best years, there are pockets of success in the Rhone-style reds."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 88,
-         "Merlot": null,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 88,
-         "Comment": "blah"
+         "Comment": "Santa Barbara had an ideal growing season; Chardonnay are intense, with pure, ripe, vibrant flavors. Record-size crop with atypically firm and structured Pinot Noir. Rhone-style red are firmly tannic wines and some real beauties from this year; should reward time in the cellar"
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 88,
-         "Merlot": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 92,
-         "Comment": "blah blah "
+         "Comment": "Santa Barbara had a year of age-worthy wine. Chardonnay had an exceptional year, distinct for vibrancy and density. Another huge crop of uniformly exceptional quality for Pinot Noir; slow to open. "
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
          "Chardonnay": 87,
-         "Merlot": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 93,
-         "Comment": "blah blah blah "
-      },
-      {
-         "year": 2015,
-         "Chardonnay": 88,
-         "Merlot": null,
-         "Pinot_Noir": 93,
-         "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "In Santa Barbara, drought produced a spartan crop for Chardonnay; fine quality, with yields the only disappointment. However, there were even higher yields of Pinot Noir than 2013, with fleshy, forward and showy wines; many approachable now. Rhone-style reds were similar to the 2013s this year, but more ripe, and more full-bodied."
+         }
       }
    ],
    "Anderson Valley": [
       {
-         "year": 1996,
+         "1997": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": null,
-         "Rhone_Style_reds": null,
-         "Comment": ""
-      },
-      {
-         "year": 1997,
-         "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley’s Pinot Noir was leaner this year."
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 80,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley faced a year of lean wines. Its Pinot was Lean and austere; highly variable"
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Anderson Valley’s Pinots this year are ripe and fleshy."
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley’s Pinots were lean, crisp wines of good quality, with few stars"
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley’s Pinots were elegant, delicate, concentrated wines this year."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Anderson Valley’s Pinots are very good; dark, complex wines that have aged well."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley’s Pinots are very good if mixed; the best are rich, supple and harmonious."
+         }
       },
       {
-         "year": 2004,
+         "2004":  {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley had an excellent year for Pinot Noirs; it was a warm, early year, with ripe, concentrated, deeply flavored wines."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Anderson Valley’s Pinots are sleek, balanced and elegant; ripe at lower alcohol levels."
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley had a cool year with a large crop; uneven ripening and some diluted wines."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines."
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 80,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Anderson Valley’s Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley’s Pinot was almost perfect, with scores of ripe, polished, deeply flavored wines."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley’s Pinot Noir are generally strong and structured."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "In Anderson Valley, rain wreaked havoc at harvest, resulting in lighter Pinot of uneven quality."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Anderson Valley had a record-size crop with atypically firm and structured Pinot Noir."
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Anderson Valley had a year of age-worthy wine. Another huge crop of uniformly exceptional quality for Pinot Noir; slow to open. "
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
-      },
-      {
-         "year": 2015,
-         "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": 89,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "In Anderson Valley, there were even higher yields of Pinot Noir than 2013, with fleshy, forward and showy wines; many approachable now. "
+         }
       }
    ],
    "Santa Lucia Highlands": [
       {
-         "year": 1996,
+         "1997": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": 80,
-         "Rhone_Style_reds": null,
-         "Comment": "blah"
-      },
-      {
-         "year": 1997,
-         "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 82,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinot Noir was leaner this year."
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands faced a year of lean wines. Its Pinot was Lean and austere; highly variable"
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Santa Lucia Highlands’s Pinots this year are ripe and fleshy."
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinots were lean, crisp wines of good quality, with few stars"
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinots were elegant, delicate, concentrated wines this year."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Santa Lucia Highlands’ Pinots are very good; dark, complex wines that have aged well."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinots are very good if mixed; the best are rich, supple and harmonious."
+         }
       },
       {
-         "year": 2004,
+         "2004": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands had an excellent year for Pinot Noirs; it was a warm, early year, with ripe, concentrated, deeply flavored wines."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Santa Lucia Highlands’ Pinots are sleek, balanced and elegant; ripe at lower alcohol levels. "
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands had a cool year with a large crop; uneven ripening and some diluted wines."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines."
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "Santa Lucia Highlands’ Pinot Noir had an excellent year; ideal warm, early season, with ripe, complex wines."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands’ Its Pinot was almost perfect, with scores of ripe, polished, deeply flavored wines."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands’ Pinot Noir are generally strong and structured."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
+         "Comment": "In Santa Lucia Highlands, rain wreaked havoc at harvest, resulting in lighter Pinot of uneven quality."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "Santa Lucia Highlands had a record-size crop with atypically firm and structured Pinot Noir."
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
-         "Comment": "blah blah blah "
+         "Comment": "Santa Lucia Highlands had a year of age-worthy wine. Another huge crop of uniformly exceptional quality for Pinot Noir; slow to open."
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Pinot_Noir]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
-         "Comment": "blah"
-      },
-      {
-         "year": 2015,
-         "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": 93,
-         "Rhone_Style_reds": null,
-         "Comment": "blah blah "
+         "Comment": "In Santa Lucia Highlands, there were even higher yields of Pinot Noir than 2013, with fleshy, forward and showy wines; many approachable now. "
+         }
       }
    ],
    "Paso Robles": [
       {
-         "year": 1996,
+         "1997": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": null,
-         "Rhone_Style_reds": null,
-         "Comment": ""
-      },
-      {
-         "year": 1997,
-         "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
-         "Comment": "blah"
+         "Comment": "Paso Robles’ Rhone-style reds had a year of excellent growing conditions."
+         }
       },
       {
-         "year": 1998,
+         "1998": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 85,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles faced a year of lean wines, with its Rhone-style reds facing a tough year."
+         }
       },
       {
-         "year": 1999,
+         "1999": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah blah "
+         "Comment": "Paso Robles’ Rhone-style reds are off the pace this year."
+         }
       },
       {
-         "year": 2000,
+         "2000": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 82,
-         "Comment": "blah"
+         "Comment": "Paso Robles’ wine were not noteworthy this year."
+         }
       },
       {
-         "year": 2001,
+         "2001": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 89,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles’ Rhone-style reds were intense and concentrated wines."
+         }
       },
       {
-         "year": 2002,
+         "2002": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 84,
-         "Comment": "blah blah blah "
+         "Comment": "Paso Robles’ Rhone-style reds are dark, rich and plush."
+         }
       },
       {
-         "year": 2003,
+         "2003": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 83,
-         "Comment": "blah"
+         "Comment": "Paso Robles’ Rhone-style reds are dark, intense, structured and concentrated this year"
+         }
       },
       {
-         "year": 2004,
+         "2004": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 89,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles saw a superb vintage of Rhone-style reds; concentrated, intense and complex wines."
+         }
       },
       {
-         "year": 2005,
+         "2005": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 86,
-         "Comment": "blah blah blah "
+         "Comment": "Paso Robles’ Rhone-style reds are also high quality this year; Intense and structured."
+         }
       },
       {
-         "year": 2006,
+         "2006": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
-         "Comment": "blah"
+         "Comment": "Paso Robles’ Rhone-style reds are a golden vintage, fabulous across all regions, offering great diversity of styles."
+         }
       },
       {
-         "year": 2007,
+         "2007": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 96,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles’ Rhone-style reds are of tremendous quality and uncommon complexity statewide; the best on record, along with 2009 and 2006."
+         }
       },
       {
-         "year": 2008,
+         "2008": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 98,
-         "Comment": "blah blah blah "
+         "Comment": "In Paso Robles, despite frost and fire, Chardonnay wasn’t spoiled, but quality is variable; tight, concentrated wines."
+         }
       },
       {
-         "year": 2009,
+         "2009": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 95,
-         "Comment": "blah"
+         "Comment": "Despite a challenging season in Paso Robles, Rhone-style reds were fabulous."
+         }
       },
       {
-         "year": 2010,
+         "2010": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles saw a cool, late harvest, but amazingly ripe and full-bodied Rhone-style reds."
+         }
       },
       {
-         "year": 2011,
+         "2011": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
-         "Comment": "blah blah blah "
+         "Comment": "Paso Robles was off the pace of best years, but there are pockets of success in its Rhone-style reds."
+         }
       },
       {
-         "year": 2012,
+         "2012": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
-         "Comment": "blah"
+         "Comment": "Paso Robles’ Rhone-style red are firmly tannic wines and some real beauties from this year; should reward time in the cellar"
+         }
       },
       {
-         "year": 2013,
+         "2013": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
-         "Comment": "blah blah "
+         "Comment": "Paso Robles had a year of age-worthy wine. Rhone-style red are expressive early but show aging potential."
+         }
       },
       {
-         "year": 2014,
+         "2014": {
+         "non_null": "[Rhone_Style_reds]",
          "Chardonnay": null,
-         "Merlot": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
-         "Comment": "blah blah blah "
-      },
-      {
-         "year": 2015,
-         "Chardonnay": null,
-         "Merlot": null,
-         "Pinot_Noir": null,
-         "Rhone_Style_reds": null,
-         "Comment": ""
+         "Comment": "Paso Robles saw Rhone-style reds similar to the 2013s, but more ripe, and more full-bodied."
+         }
       }
    ]
 }
