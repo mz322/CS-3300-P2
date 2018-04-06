@@ -2,7 +2,7 @@
    "Sonoma": [
       {
          "1997": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 95,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 86,
@@ -11,7 +11,7 @@
       },
       {
          "1998": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 86,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": 82,
@@ -20,7 +20,7 @@
       },
       {
          "1999": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 85,
@@ -29,7 +29,7 @@
       },
       {
          "2000": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": 87,
@@ -38,7 +38,7 @@
       },
       {
          "2001": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 89,
@@ -47,7 +47,7 @@
       },
       {
          "2002": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 99,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 89,
@@ -56,7 +56,7 @@
       },
       {
          "2003": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 88,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": 90,
@@ -65,7 +65,7 @@
       },
       {
          "2004": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 99,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": 89,
@@ -74,7 +74,7 @@
       },
       {
          "2005": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 95,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 87,
@@ -83,7 +83,7 @@
       },
       {
          "2006": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 95,
@@ -92,7 +92,7 @@
       },
       {
          "2007": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 96,
          "Pinot_Noir": 95,
          "Rhone_Style_reds": 92,
@@ -101,7 +101,7 @@
       },
       {
          "2008": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 91,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 91,
@@ -110,7 +110,7 @@
       },
       {
          "2009": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 95,
          "Pinot_Noir": 97,
          "Rhone_Style_reds": 93,
@@ -119,7 +119,7 @@
       },
       {
          "2010": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": 93,
@@ -128,7 +128,7 @@
       },
       {
          "2011": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 87,
@@ -137,7 +137,7 @@
       },
       {
          "2012": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 93,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": 92,
@@ -146,7 +146,7 @@
       },
       {
          "2013": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 93,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": 93,
@@ -155,7 +155,7 @@
       },
       {
          "2014": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"]],
          "Chardonnay": 92,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": 94,
@@ -166,7 +166,7 @@
    "Napa": [
       {
          "1997": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 96,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
@@ -175,7 +175,7 @@
       },
       {
          "1998": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 84,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
@@ -184,7 +184,7 @@
       },
       {
          "1999": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -193,7 +193,7 @@
       },
       {
          "2000": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -202,7 +202,7 @@
       },
       {
          "2001": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
@@ -211,7 +211,7 @@
       },
       {
          "2002": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 96,
@@ -220,7 +220,7 @@
       },
       {
          "2003": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 90,
@@ -229,7 +229,7 @@
       },
       {
          "2004": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
@@ -238,7 +238,7 @@
       },
       {
          "2005": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
@@ -247,7 +247,7 @@
       },
       {
          "2006": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 88,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -256,7 +256,7 @@
       },
       {
          "2007": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 95,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 95,
@@ -265,7 +265,7 @@
       },
       {
          "2008": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 91,
@@ -274,7 +274,7 @@
       },
       {
          "2009": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
@@ -283,7 +283,7 @@
       },
       {
          "2010": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -292,7 +292,7 @@
       },
       {
          "2011": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
@@ -301,7 +301,7 @@
       },
       {
          "2012": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 94,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -310,7 +310,7 @@
       },
       {
          "2013": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 93,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
@@ -319,7 +319,7 @@
       },
       {
          "2014": {
-         "non_null": "[Chardonnay, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
@@ -330,7 +330,7 @@
    "Santa Barbara": [
       {
          "1997": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 96,
          "Pinot_Noir": 82,
          "Rhone_Style_reds": 86,
@@ -339,7 +339,7 @@
       },
       {
          "1998": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 83,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 82,
@@ -348,7 +348,7 @@
       },
       {
          "1999": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 93,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 86,
@@ -357,7 +357,7 @@
       },
       {
          "2000": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 86,
          "Pinot_Noir": 81,
          "Rhone_Style_reds": 85,
@@ -366,7 +366,7 @@
       },
       {
          "2001": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 87,
@@ -375,7 +375,7 @@
       },
       {
          "2002": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 85,
@@ -384,7 +384,7 @@
       },
       {
          "2003": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 88,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": 89,
@@ -393,7 +393,7 @@
       },
       {
          "2004": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": 86,
@@ -402,7 +402,7 @@
       },
       {
          "2005": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 86,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 89,
@@ -411,7 +411,7 @@
       },
       {
          "2006": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 82,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": 94,
@@ -420,7 +420,7 @@
       },
       {
          "2007": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 89,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 95,
@@ -429,7 +429,7 @@
       },
       {
          "2008": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 86,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 91,
@@ -438,7 +438,7 @@
       },
       {
          "2009": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 91,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": 92,
@@ -447,7 +447,7 @@
       },
       {
          "2010": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": 87,
@@ -456,7 +456,7 @@
       },
       {
          "2011": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 85,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": 87,
@@ -465,7 +465,7 @@
       },
       {
          "2012": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 88,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": 88,
@@ -474,7 +474,7 @@
       },
       {
          "2013": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 88,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": 92,
@@ -483,7 +483,7 @@
       },
       {
          "2014": {
-         "non_null": "[Chardonnay, Pinot_Noir, Rhone_Style_reds]",
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 87,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": 93,
@@ -494,7 +494,7 @@
    "Anderson Valley": [
       {
          "1997": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": null,
@@ -503,7 +503,7 @@
       },
       {
          "1998": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 80,
          "Rhone_Style_reds": null,
@@ -512,7 +512,7 @@
       },
       {
          "1999": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
@@ -521,7 +521,7 @@
       },
       {
          "2000": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": null,
@@ -530,7 +530,7 @@
       },
       {
          "2001": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
@@ -539,7 +539,7 @@
       },
       {
          "2002": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": null,
@@ -548,7 +548,7 @@
       },
       {
          "2003": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
@@ -557,7 +557,7 @@
       },
       {
          "2004":  {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
@@ -566,7 +566,7 @@
       },
       {
          "2005": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
@@ -575,7 +575,7 @@
       },
       {
          "2006": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
@@ -584,7 +584,7 @@
       },
       {
          "2007": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
@@ -593,7 +593,7 @@
       },
       {
          "2008": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 80,
          "Rhone_Style_reds": null,
@@ -602,7 +602,7 @@
       },
       {
          "2009": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": null,
@@ -611,7 +611,7 @@
       },
       {
          "2010": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
@@ -620,7 +620,7 @@
       },
       {
          "2011": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 86,
          "Rhone_Style_reds": null,
@@ -629,7 +629,7 @@
       },
       {
          "2012": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": null,
@@ -638,7 +638,7 @@
       },
       {
          "2013": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": null,
@@ -647,7 +647,7 @@
       },
       {
          "2014": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
@@ -658,7 +658,7 @@
    "Santa Lucia Highlands": [
       {
          "1997": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 82,
          "Rhone_Style_reds": null,
@@ -667,7 +667,7 @@
       },
       {
          "1998": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 84,
          "Rhone_Style_reds": null,
@@ -676,7 +676,7 @@
       },
       {
          "1999": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 85,
          "Rhone_Style_reds": null,
@@ -685,7 +685,7 @@
       },
       {
          "2000": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 83,
          "Rhone_Style_reds": null,
@@ -694,7 +694,7 @@
       },
       {
          "2001": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 88,
          "Rhone_Style_reds": null,
@@ -703,7 +703,7 @@
       },
       {
          "2002": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
@@ -712,7 +712,7 @@
       },
       {
          "2003": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 89,
          "Rhone_Style_reds": null,
@@ -721,7 +721,7 @@
       },
       {
          "2004": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
@@ -730,7 +730,7 @@
       },
       {
          "2005": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
@@ -739,7 +739,7 @@
       },
       {
          "2006": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 87,
          "Rhone_Style_reds": null,
@@ -748,7 +748,7 @@
       },
       {
          "2007": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": null,
@@ -757,7 +757,7 @@
       },
       {
          "2008": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 90,
          "Rhone_Style_reds": null,
@@ -766,7 +766,7 @@
       },
       {
          "2009": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
@@ -775,7 +775,7 @@
       },
       {
          "2010": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": null,
@@ -784,7 +784,7 @@
       },
       {
          "2011": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
@@ -793,7 +793,7 @@
       },
       {
          "2012": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 91,
          "Rhone_Style_reds": null,
@@ -802,7 +802,7 @@
       },
       {
          "2013": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 94,
          "Rhone_Style_reds": null,
@@ -811,7 +811,7 @@
       },
       {
          "2014": {
-         "non_null": "[Pinot_Noir]",
+         "non_null": ["Pinot_Noir"],
          "Chardonnay": null,
          "Pinot_Noir": 93,
          "Rhone_Style_reds": null,
@@ -822,7 +822,7 @@
    "Paso Robles": [
       {
          "1997": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
@@ -831,7 +831,7 @@
       },
       {
          "1998": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 85,
@@ -840,7 +840,7 @@
       },
       {
          "1999": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
@@ -849,7 +849,7 @@
       },
       {
          "2000": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 82,
@@ -858,7 +858,7 @@
       },
       {
          "2001": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": "["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 89,
@@ -867,7 +867,7 @@
       },
       {
          "2002": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 84,
@@ -876,7 +876,7 @@
       },
       {
          "2003": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 83,
@@ -885,7 +885,7 @@
       },
       {
          "2004": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 89,
@@ -894,7 +894,7 @@
       },
       {
          "2005": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 86,
@@ -903,7 +903,7 @@
       },
       {
          "2006": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 92,
@@ -912,7 +912,7 @@
       },
       {
          "2007": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 96,
@@ -921,7 +921,7 @@
       },
       {
          "2008": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 98,
@@ -930,7 +930,7 @@
       },
       {
          "2009": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 95,
@@ -939,7 +939,7 @@
       },
       {
          "2010": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 97,
@@ -948,7 +948,7 @@
       },
       {
          "2011": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 87,
@@ -957,7 +957,7 @@
       },
       {
          "2012": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 93,
@@ -966,7 +966,7 @@
       },
       {
          "2013": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
@@ -975,7 +975,7 @@
       },
       {
          "2014": {
-         "non_null": "[Rhone_Style_reds]",
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 94,
