@@ -1,0 +1,187 @@
+<html>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+<p id="p1">
+  <div id="div1">
+    </svg>
+  </div>
+</p>
+
+
+<script>
+
+//Svg Dimensions
+var svg_height_1= 500
+var svg_width_1= 750
+
+
+//Placeholder empty svg
+d3.select("#div1").append("svg")
+.attr("id", "wine_image")
+.attr("height", svg_height_1)
+.attr("width", svg_width_1)
+
+
+var wine_height=70
+
+var demo_data= {"non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
+"Chardonnay": 86,
+"Pinot_Noir": 84,
+"Rhone_Style_reds": 82,
+"Comment": "Sonoma faced a year of lean wines; its Chardonnay and Pinot were austere. Rhone-style reds also faced a tough year."}
+
+var wine_vintage_scale= d3.scaleLinear()
+.domain([80, 100])
+.range([0, 200])
+
+var image_scale_size= function(height, width) {
+  return (height * width / 2 * 0.000002)
+}
+
+var wine_color= function(varietal) {
+  if (varietal == "Chardonnay") {return "yellow"}
+  else {return "red"}
+}
+
+var vintage_rating= function(varietal, data) {
+  if (varietal == "Chardonnay") {return data.Chardonnay}
+  else if (varietal == "Pinot_Noir") {return data.Pinot_Noir}
+  else {return data.Rhone_Style_reds}
+}
+
+var wine_varietal_to_string= function(varietal) {
+  if (varietal == "Chardonnay") {return "Chardonnay"}
+  else if (varietal == "Pinot_Noir") {return "Pinot Noir"}
+  else {return "Rhone Styled Reds"}
+}
+
+var glass_maker= function(g_name, varietal, data) {
+  var inner_image= g_name.append("g")
+  .attr("transform", "scale ( " + image_scale_size(svg_height_1, svg_width_1) + ", " + image_scale_size(svg_height_1, svg_width_1) + ")")
+
+  inner_image.append("text")
+  .text(varietal)
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("y", -240)
+  .attr("font-size", 40)
+
+  inner_image.append("ellipse")
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("rx", 100)
+  .attr("ry", 60)
+  .style("fill", wine_color(varietal))
+  .style("stroke", "gray")
+  .style("stroke-width", 4)
+
+  inner_image.append("polygon")
+  .attr("points", "-100,0 -100,-200 100,-200 100,0")
+  .style("stroke-width", 4)
+  .style("stroke", "gray")
+  .style("fill", "white")
+
+  inner_image.append("line")
+  .attr("x1", -98)
+  .attr("y1", 0)
+  .attr("x2", 98)
+  .attr("y2", 0)
+  .style("stroke-width", 5)
+  .style("stroke", wine_color(varietal))
+
+  inner_image.append("polygon")
+  .attr("points", "-98,0 -98," + (-1 * wine_vintage_scale(data)) + " 98," + (-1 * wine_vintage_scale(data)) + " 98,0")
+  .style("fill", wine_color(varietal))
+
+  inner_image.append("text")
+  .text(data)
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("y", -70)
+  .attr("font-size", 100)
+
+  inner_image.append("ellipse")
+  .attr("cx", 0)
+  .attr("cy", 200)
+  .attr("rx", 80)
+  .attr("ry", 40)
+  .style("fill", "none")
+  .style("stroke", "gray")
+  .style("stroke-width", 4)
+
+  inner_image.append("line")
+  .attr("x1", 0)
+  .attr("y1", 60)
+  .attr("x2", 0)
+  .attr("y2", 200)
+  .style("stroke-width", 4)
+  .style("stroke", "gray")
+}
+
+var update_wine_image= function(input_data) {
+
+  d3.select("#wine_image").remove();
+
+  var new_svg= d3.select("#div1").append("svg")
+  .attr("id", "wine_image")
+  .attr("height", svg_height_1)
+  .attr("width", svg_width_1)
+
+  if (input_data.non_null.length == 3) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 4) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+
+    var varietal_2= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 2) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_2, wine_varietal_to_string(input_data.non_null[1]), vintage_rating(input_data.non_null[1], input_data))
+
+    var varietal_3= new_svg.append("g")
+    .attr("transform", "translate (" + (3 * svg_width_1 / 4) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_3, wine_varietal_to_string(input_data.non_null[2]), vintage_rating(input_data.non_null[2], input_data))
+  }
+
+  else if (input_data.non_null.length == 2) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 3) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+
+    var varietal_2= new_svg.append("g")
+    .attr("transform", "translate (" + (2 * svg_width_1 / 3) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_2, wine_varietal_to_string(input_data.non_null[1]), vintage_rating(input_data.non_null[1], input_data))
+  }
+
+  else if (input_data.non_null.length == 1) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 2) + ", " + (svg_height_1 / 2) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+  }
+
+
+}
+
+update_wine_image(demo_data)
+
+var demo_data_1= {"non_null": ["Chardonnay"],
+"Chardonnay": 94,
+"Pinot_Noir": null,
+"Rhone_Style_reds": null,
+"Comment": "Sonoma faced a year of lean wines; its Chardonnay and Pinot were austere. Rhone-style reds also faced a tough year."}
+
+var demo_data_2= {"non_null": ["Pinot_Noir", "Rhone_Style_reds"],
+"Chardonnay": null,
+"Pinot_Noir": 97,
+"Rhone_Style_reds": 82,
+"Comment": "Sonoma faced a year of lean wines; its Chardonnay and Pinot were austere. Rhone-style reds also faced a tough year."}
+
+</script>
+
+
+</html>
