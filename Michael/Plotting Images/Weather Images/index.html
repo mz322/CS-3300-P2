@@ -31,6 +31,24 @@ var total_rain_linear= d3.scaleLinear()
 .domain([0, 100])
 .range([0, 1500])
 
+var total_rain_linear_area= function (value) {
+  return sqrt_scale(total_rain_linear(value))
+}
+
+var resizing= d3.scaleLinear()
+.domain([0, 10])
+.range([0, 40])
+
+var total_rain_decile= d3.scaleQuantile()
+.domain([0, 3, 3, 5, 7, 10, 13, 17, 22, 30.1, 53])
+.range([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+var total_rain_decile_resized= function(value) {
+  return resizing(total_rain_decile(value))
+}
+
+var total_rain_scale_final= total_rain_decile_resized
+
 var rainy_day_quantile= d3.scaleQuantile()
 .domain([0, 5, 10, 15, 20, 25, 31])
 .range([0, 1, 2, 3, 4, 5])
@@ -39,12 +57,26 @@ var avg_temp_linear= d3.scaleLinear()
 .domain([0, 100])
 .range([0, 2000])
 
+var avg_temp_linear_area= function (value) {
+  return sqrt_scale(avg_temp_linear(value))
+}
+
+var avg_temp_decile= d3.scaleQuantile()
+.domain([0, 48.32333333001, 50.03333333001, 54.610000001, 57.620000001, 59.775000001, 61.58666667001, 63.34000001, 68.44400001, 76.133333330001, 76.13333000001])
+.range([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+var avg_temp_decile_resized= function(value) {
+  return resizing(avg_temp_decile(value))
+}
+
+var avg_temp_scale_final= avg_temp_decile_resized
+
 
 //For demo purposes
-var demo_array= [100, 30, 25,
-  40, 20, 40,
-  10, 5, 90,
-  75, 15, 70]
+var demo_array= [53, 30, 45,
+  3, 20, 49,
+  5, 5, 54,
+  17, 15, 77]
 
 //barn color scheme
 var winterfield1= "#DCE3E4"
@@ -582,7 +614,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
 
   var winter_total_rain_image= winter_total_rain.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(total_rain_linear(input_array[0])) * (svg_height * svg_width / 2)) + ", " + (sqrt_scale(total_rain_linear(input_array[0])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (total_rain_scale_final(input_array[0]) * (svg_height * svg_width / 2)) + ", " + (total_rain_scale_final(input_array[0]) * (svg_height * svg_width / 2)) + ")")
 
 
 
@@ -596,7 +628,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
 
   var winter_avg_temp_image= winter_avg_temp.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(avg_temp_linear(input_array[2])) * (svg_height * svg_width / 2)) + ", " + (sqrt_scale(avg_temp_linear(input_array[2])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (avg_temp_scale_final(input_array[2]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[2]) * (svg_height * svg_width / 2)) + ")")
 
   create_sun(winter_avg_temp_image)
 
@@ -608,7 +640,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
 
   var spring_total_rain_image= spring_total_rain.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(total_rain_linear(input_array[3])) * (svg_height * svg_width / 2))  + ", " + (sqrt_scale(total_rain_linear(input_array[3])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (total_rain_scale_final(input_array[3]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[3]) * (svg_height * svg_width / 2)) + ")")
 
   create_large_droplet(spring_total_rain_image)
 
@@ -618,7 +650,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
 
   var spring_avg_temp_image= spring_avg_temp.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(avg_temp_linear(input_array[5])) * (svg_height * svg_width / 2)) + ", " + (sqrt_scale(avg_temp_linear(input_array[5])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (avg_temp_scale_final(input_array[5]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[5]) * (svg_height * svg_width / 2)) + ")")
 
   create_sun(spring_avg_temp_image)
 
@@ -629,7 +661,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
 
   var summer_total_rain_image= summer_total_rain.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(total_rain_linear(input_array[6])) * (svg_height * svg_width / 2))  + ", " + (sqrt_scale(total_rain_linear(input_array[6])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (total_rain_scale_final(input_array[6]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[6]) * (svg_height * svg_width / 2)) + ")")
 
   create_large_droplet(summer_total_rain_image)
 
@@ -639,7 +671,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
 
   var summer_avg_temp_image= summer_avg_temp.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(avg_temp_linear(input_array[8])) * (svg_height * svg_width / 2)) + ", " + (sqrt_scale(avg_temp_linear(input_array[8])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (avg_temp_scale_final(input_array[8]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[8]) * (svg_height * svg_width / 2)) + ")")
 
   create_sun(summer_avg_temp_image)
 
@@ -650,7 +682,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
 
   var fall_total_rain_image= fall_total_rain.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(total_rain_linear(input_array[9])) * (svg_height * svg_width / 2))  + ", " + (sqrt_scale(total_rain_linear(input_array[9])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (total_rain_scale_final(input_array[9]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[9]) * (svg_height * svg_width / 2)) + ")")
 
   create_large_droplet(fall_total_rain_image)
 
@@ -660,7 +692,7 @@ var update_weather_image= function(input_array) {
   .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
 
   var fall_avg_temp_image= fall_avg_temp.append("g")
-  .attr("transform", "scale(" + (sqrt_scale(avg_temp_linear(input_array[11])) * (svg_height * svg_width / 2)) + ", " + (sqrt_scale(avg_temp_linear(input_array[11])) * (svg_height * svg_width / 2)) + ")")
+  .attr("transform", "scale(" + (avg_temp_scale_final(input_array[11]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[11]) * (svg_height * svg_width / 2)) + ")")
 
   create_sun(fall_avg_temp_image)
 }
