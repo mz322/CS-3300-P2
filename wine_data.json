@@ -155,7 +155,7 @@
       },
       {
          "2014": {
-         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"]],
+         "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
          "Chardonnay": 92,
          "Pinot_Noir": 92,
          "Rhone_Style_reds": 94,
