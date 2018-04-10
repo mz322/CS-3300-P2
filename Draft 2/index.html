@@ -1169,7 +1169,7 @@ var create_key_2= function() {
 
   var svg= d3.select("#key").append("svg")
   .attr("id", "key")
-  .attr("height", 400)
+  .attr("height", 420)
   .attr("width", 800)
 
   var example_barn= svg.append("g")
@@ -1211,6 +1211,12 @@ var create_key_2= function() {
 
   create_large_droplet(droplet_image)
 
+  droplet.append("text")
+  .text("0.00")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
   var droplet= droplet.append("g")
   .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
 
@@ -1232,6 +1238,12 @@ var create_key_2= function() {
 
   create_large_droplet(droplet_image)
 
+  droplet.append("text")
+  .text("1.19")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
   //Snowflake
   var droplet= new_svg.append("g")
   .attr("transform", "translate (" + horizontalspace + ", " + (3 * verticalspace) + ")")
@@ -1240,6 +1252,12 @@ var create_key_2= function() {
   .attr("transform", "scale(" + (resizing(1) * (svg_height * svg_width / 2)) + ", " + (resizing(1) * (svg_height * svg_width / 2)) + ")")
 
   create_large_snowflake(droplet_image)
+
+  droplet.append("text")
+  .text("0")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
 
   var droplet= droplet.append("g")
   .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
@@ -1262,12 +1280,31 @@ var create_key_2= function() {
 
   create_large_snowflake(droplet_image)
 
+  droplet.append("text")
+  .text("1.19")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
   //clusters
   var droplet= new_svg.append("g")
   .attr("transform", "translate (" + 0 + ", " + (4 * verticalspace) + ")")
 
+  droplet.append("text")
+  .text("1")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(80, 90)")
+
+  droplet.append("text")
+  .text("53")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(337, 90)")
+
   var droplet= droplet.append("g")
   .attr("transform", "scale (.5, .5) translate (" + (.3 * horizontalspace) + ", " + 0 + ")")
+
 
   create_small_droplets(1, droplet)
 
@@ -1296,6 +1333,12 @@ var create_key_2= function() {
 
   create_sun(droplet_image)
 
+  droplet.append("text")
+  .text("43")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 50)")
+
   var droplet= droplet.append("g")
   .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
 
@@ -1316,6 +1359,68 @@ var create_key_2= function() {
   .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
 
   create_sun(droplet_image)
+
+  droplet.append("text")
+  .text("76")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 50)")
+
+  svg.append("line")
+  .attr("x1", 93)
+  .attr("y1", 95)
+  .attr("x2", 420)
+  .attr("y2", 50)
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("line")
+  .attr("x1", 93)
+  .attr("y1", 95)
+  .attr("x2", 420)
+  .attr("y2", 148)
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("circle")
+  .attr("cx", 93)
+  .attr("cy", 95)
+  .attr("r", 35)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("circle")
+  .attr("cx", 280)
+  .attr("cy", 65)
+  .attr("r", 55)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "purple")
+
+  svg.append("line")
+  .attr("x1", 280)
+  .attr("y1", 65)
+  .attr("x2", 420)
+  .attr("y2", 355)
+  .style("stroke-width", 2)
+  .style("stroke", "purple")
+
+  svg.append("circle")
+  .attr("cx", 142)
+  .attr("cy", 142)
+  .attr("r", 25)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "blue")
+
+  svg.append("line")
+  .attr("x1", 142)
+  .attr("y1", 142)
+  .attr("x2", 420)
+  .attr("y2", 268)
+  .style("stroke-width", 2)
+  .style("stroke", "blue")
 }
 create_key_2()
 
