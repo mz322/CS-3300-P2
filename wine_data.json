@@ -858,7 +858,7 @@
       },
       {
          "2001": {
-         "non_null": "["Rhone_Style_reds"],
+         "non_null": ["Rhone_Style_reds"],
          "Chardonnay": null,
          "Pinot_Noir": null,
          "Rhone_Style_reds": 89,
