@@ -12,7 +12,7 @@
 <script>
 
 //Svg Dimensions
-var svg_height= 450
+var svg_height= 400
 var svg_width= 1500
 
 
@@ -111,6 +111,8 @@ var falltree1= "#FF8A05"
 var falltree2= "#FF5005"
 var fallbarntop= "#C00B23"
 
+var textsize= 70
+
 var barnColor= function(element, season) {
   if (season == "winter") {
     if (element == 1) {return winterfield1}
@@ -152,7 +154,7 @@ var barnColor= function(element, season) {
 
 var plot_barn= function(g_name, season) {
   var inner_image= g_name.append("g")
-  .attr("transform", "scale (" + (.0008 * (svg_height)) + "," + (.0008 * (svg_height)) + ") translate (-10, 110)")
+  .attr("transform", "scale (" + (.0008 * (svg_height)) + "," + (.0008 * (svg_height)) + ") translate (-10, 0)")
 
   inner_image.append("path")
   .attr("d", "M476.605,34.395c-1.143-1.143-2.461-2.095-3.896-2.813l-60-30C410.629,0.542,408.329,0,406,0H286  l13.447,50.964l151.505,31.763L512,60L476.605,34.395z")
@@ -229,6 +231,14 @@ var plot_barn= function(g_name, season) {
   inner_image.append("path")
   .attr("d", "M369.789,512h42.422H497c8.291,0,15-6.709,15-15v-83.789v-42.422L369.789,512z")
   .style("fill", barnColor(4, season))
+
+  inner_image.append("text")
+  .text(season[0].toUpperCase() + season.substring(1))
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("x", 250)
+  .attr("y", 575)
+  .attr("font-size", textsize)
 }
 
 var plot_single_snow_cloud= function(g_name) {
