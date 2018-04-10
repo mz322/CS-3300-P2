@@ -327,7 +327,7 @@
          }
       }
    ],
-   "Santa Barbara": [
+   "Santa_Barbara": [
       {
          "1997": {
          "non_null": ["Chardonnay", "Pinot_Noir", "Rhone_Style_reds"],
@@ -491,7 +491,7 @@
          }
       }
    ],
-   "Anderson Valley": [
+   "Anderson_Valley": [
       {
          "1997": {
          "non_null": ["Pinot_Noir"],
@@ -655,7 +655,7 @@
          }
       }
    ],
-   "Santa Lucia Highlands": [
+   "Santa_Lucia_Highlands": [
       {
          "1997": {
          "non_null": ["Pinot_Noir"],
@@ -819,7 +819,7 @@
          }
       }
    ],
-   "Paso Robles": [
+   "Paso_Robles": [
       {
          "1997": {
          "non_null": ["Rhone_Style_reds"],
