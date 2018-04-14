@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://d3js.org/topojson.v1.min.js"></script>
+<!-- <script src="https://d3plus.org/js/d3.js"></script>
+<script src="https://d3plus.org/js/d3plus.js"></script> -->
 
 <style>
   svg {
@@ -27,7 +27,7 @@
   <text class="type" dy="15px" x="75px">Wrapped</text>
 
   <rect class="shape" height="150px" width="150px" y="50px"></rect>
-  <text id="rectWrap" class="wrap" y="50px" font-size="12">
+  <text id="txtWrap2" class="wrap" y="50px" font-size="12">
     Here is a long text string that SVG should wrap by default, but it does not.
   </text>
 
@@ -64,10 +64,56 @@
 
 </svg>
 
+<script>
+var wrap= function() {d3plus.textwrap()
+.container(d3.select("#txtwrap"))
+.resize(true)
+.draw();};
+</script>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
 <svg id="test" height=400 width=400>
 </svg>
 
 <script>
+var lineNumber = 0
+var lineHeight = 1.1
+var dy= 0
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+        console.log(dy)
+        console.log(tspan)
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        console.log(++lineNumber * lineHeight + dy)
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", (++lineNumber * lineHeight + dy)).text(word);
+      }
+    }
+  });
+}
+
+function type(d) {
+  d.value = +d.value;
+  return d;
+}
+
   var svg= d3.select("#test")
 
   svg.append("rect")
@@ -82,42 +128,14 @@
   .attr("id", "txtwrap")
   .attr("x", 100)
   .attr("y", 100)
-  .call(wrap, 200)
 
-  function wrap(text, width) {
-  text.each(function() {
-    var text = d3.select(this),
-        words = text.text().split(/\s+/).reverse(),
-        word,
-        line = [],
-        lineNumber = 0,
-        lineHeight = 12, // ems
-        y = text.attr("y"),
-        dy = parseFloat(text.attr("dy")),
-        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-    while (word = words.pop()) {
-      line.push(word);
-      tspan.text(line.join(" "));
-      if (tspan.node().getComputedTextLength() > width) {
-        line.pop();
-        tspan.text(line.join(" "));
-        line = [word];
-        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-      }
-    }
-  });
-}
+  wrap(d3.select("#txtwrap"), 200)
 
   // var wrap= d3.textwrap()
   // .bounds({height: 200, width: 200})
   // .method('tspans')
   //
   // var txt= d3.select()
-
-  // d3plus.textwrap()
-  // .container(d3.select("#txtwrap"))
-  // .resize(true)
-  // .draw();
 
   // Wrap text in a rectangle.
   // d3plus.textwrap()

@@ -1,0 +1,2828 @@
+{
+"Sonoma":
+{
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 25,
+         "precip_avg": 0.49,
+         "temp_avg": 49.73
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.23,
+         "temp_avg": 60.97
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.22,
+         "temp_avg": 69.9
+      },
+      {
+         "season": "Fall",
+         "precip_day": 20,
+         "precip_avg": 0.32,
+         "temp_avg": 52.57
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 53,
+         "precip_avg": 0.52,
+         "temp_avg": 48.33
+      },
+      {
+         "season": "Spring",
+         "precip_day": 39,
+         "precip_avg": 0.22,
+         "temp_avg": 56.15
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.03,
+         "temp_avg": 70.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.26,
+         "temp_avg": 57
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 32,
+         "precip_avg": 0.43,
+         "temp_avg": 48.07
+      },
+      {
+         "season": "Spring",
+         "precip_day": 19,
+         "precip_avg": 0.3,
+         "temp_avg": 53.65
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 66.2
+      },
+      {
+         "season": "Fall",
+         "precip_day": 17,
+         "precip_avg": 0.21,
+         "temp_avg": 55.2
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 44,
+         "precip_avg": 0.37,
+         "temp_avg": 49.9
+      },
+      {
+         "season": "Spring",
+         "precip_day": 20,
+         "precip_avg": 0.36,
+         "temp_avg": 58.9
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.1,
+         "temp_avg": 73.4
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.15,
+         "temp_avg": 61.3
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 38,
+         "precip_avg": 0.48,
+         "temp_avg": 48.13
+      },
+      {
+         "season": "Spring",
+         "precip_day": 13,
+         "precip_avg": 0.14,
+         "temp_avg": 59.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.02,
+         "temp_avg": 68.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 15,
+         "precip_avg": 0.48,
+         "temp_avg": 61.2
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 28,
+         "precip_avg": 0.56,
+         "temp_avg": 49.27
+      },
+      {
+         "season": "Spring",
+         "precip_day": 15,
+         "precip_avg": 0.27,
+         "temp_avg": 56.5
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 69.9
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.19,
+         "temp_avg": 59
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 38,
+         "precip_avg": 0.33,
+         "temp_avg": 50.8
+      },
+      {
+         "season": "Spring",
+         "precip_day": 22,
+         "precip_avg": 0.35,
+         "temp_avg": 53.55
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 68.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.11,
+         "temp_avg": 60.4
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 34,
+         "precip_avg": 0.72,
+         "temp_avg": 50.6
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.14,
+         "temp_avg": 60.47
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 69.7
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.45,
+         "temp_avg": 61.37
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 40,
+         "precip_avg": 0.54,
+         "temp_avg": 49.63
+      },
+      {
+         "season": "Spring",
+         "precip_day": 27,
+         "precip_avg": 0.39,
+         "temp_avg": 58.1
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.03,
+         "temp_avg": 64.2
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.14,
+         "temp_avg": 59.85
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.43,
+         "temp_avg": 49.03
+      },
+      {
+         "season": "Spring",
+         "precip_day": 39,
+         "precip_avg": 0.32,
+         "temp_avg": 55.45
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 62.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.34,
+         "temp_avg": 53.4
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 28,
+         "precip_avg": 0.32,
+         "temp_avg": 47.33
+      },
+      {
+         "season": "Spring",
+         "precip_day": 9,
+         "precip_avg": 0.2,
+         "temp_avg": 57
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 69.3
+      },
+      {
+         "season": "Fall",
+         "precip_day": 12,
+         "precip_avg": 0.19,
+         "temp_avg": 57.31
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 39,
+         "precip_avg": 0.37,
+         "temp_avg": 46.97
+      },
+      {
+         "season": "Spring",
+         "precip_day": 5,
+         "precip_avg": 0.14,
+         "temp_avg": 57.63
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 70.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 10,
+         "precip_avg": 0.21,
+         "temp_avg": 55.7
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 31,
+         "precip_avg": 0.27,
+         "temp_avg": 47.35
+      },
+      {
+         "season": "Spring",
+         "precip_day": 18,
+         "precip_avg": 0.26,
+         "temp_avg": 57.03
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.02,
+         "temp_avg": 66.35
+      },
+      {
+         "season": "Fall",
+         "precip_day": 12,
+         "precip_avg": 0.26,
+         "temp_avg": 52.4
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 45,
+         "precip_avg": 0.45,
+         "temp_avg": 49.7
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.18,
+         "temp_avg": 58.3
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 68.43
+      },
+      {
+         "season": "Fall",
+         "precip_day": 14,
+         "precip_avg": 0.35,
+         "temp_avg": 53.3
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 5,
+         "precip_avg": 0.4,
+         "temp_avg": 49.8
+      },
+      {
+         "season": "Spring",
+         "precip_day": 0,
+         "precip_avg": 0,
+         "temp_avg": 53.95
+      },
+      {
+         "season": "Summer",
+         "precip_day": 2,
+         "precip_avg": 0,
+         "temp_avg": 66.4
+      },
+      {
+         "season": "Fall",
+         "precip_day": 1,
+         "precip_avg": 0,
+         "temp_avg": 56.2
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 14,
+         "precip_avg": 0.48,
+         "temp_avg": 49.3
+      },
+      {
+         "season": "Spring",
+         "precip_day": 4,
+         "precip_avg": 0.21,
+         "temp_avg": 58.14
+      },
+      {
+         "season": "Summer",
+         "precip_day": 2,
+         "precip_avg": 0,
+         "temp_avg": 69.23
+      },
+      {
+         "season": "Fall",
+         "precip_day": 17,
+         "precip_avg": 0.26,
+         "temp_avg": 60.77
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 7,
+         "precip_avg": 0.36,
+         "temp_avg": 45.35
+      },
+      {
+         "season": "Spring",
+         "precip_day": 6,
+         "precip_avg": 0.34,
+         "temp_avg": 59.23
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.2,
+         "temp_avg": 68.33
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.23,
+         "temp_avg": 63.55
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 27,
+         "precip_avg": 0.61,
+         "temp_avg": 52.07
+      },
+      {
+         "season": "Spring",
+         "precip_day": 18,
+         "precip_avg": 0.25,
+         "temp_avg": 56.16
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.01,
+         "temp_avg": 68.97
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.32,
+         "temp_avg": 63.13
+      }
+   ]
+},
+"Napa":
+    {
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 0.65,
+         "temp_avg": 47.55
+      },
+      {
+         "season": "Spring",
+         "precip_day": 3,
+         "precip_avg": 0.35,
+         "temp_avg": 61.93
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.31,
+         "temp_avg": 74.03
+      },
+      {
+         "season": "Fall",
+         "precip_day": 14,
+         "precip_avg": 0.33,
+         "temp_avg": 63.3
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 43,
+         "precip_avg": 0.58,
+         "temp_avg": 47.03
+      },
+      {
+         "season": "Spring",
+         "precip_day": 21,
+         "precip_avg": 0.51,
+         "temp_avg": 54.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.31,
+         "temp_avg": 61.97
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 17,
+         "precip_avg": 0.48,
+         "temp_avg": 46.87
+      },
+      {
+         "season": "Spring",
+         "precip_day": 11,
+         "precip_avg": 0.46,
+         "temp_avg": 56.37
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.03,
+         "temp_avg": 72.3
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.4,
+         "temp_avg": 64.33
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 27,
+         "precip_avg": 0.5,
+         "temp_avg": 48.53
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.64,
+         "temp_avg": 59.37
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.06,
+         "temp_avg": 73.63
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.36,
+         "temp_avg": 60.4
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 33,
+         "precip_avg": 0.93,
+         "temp_avg": 46.63
+      },
+      {
+         "season": "Spring",
+         "precip_day": 6,
+         "precip_avg": 0.42,
+         "temp_avg": 60.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.03,
+         "temp_avg": 74.73
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.5,
+         "temp_avg": 64.57
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 22,
+         "precip_avg": 0.7,
+         "temp_avg": 48.23
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.37,
+         "temp_avg": 57.83
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 74.77
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.31,
+         "temp_avg": 63.43
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 22,
+         "precip_avg": 0.52,
+         "temp_avg": 49.6
+      },
+      {
+         "season": "Spring",
+         "precip_day": 17,
+         "precip_avg": 0.47,
+         "temp_avg": 57.6
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.08,
+         "temp_avg": 76.13
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.25,
+         "temp_avg": 64.87
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 29,
+         "precip_avg": 0.75,
+         "temp_avg": 48.33
+      },
+      {
+         "season": "Spring",
+         "precip_day": 5,
+         "precip_avg": 0.22,
+         "temp_avg": 61.8
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 74.87
+      },
+      {
+         "season": "Fall",
+         "precip_day": 10,
+         "precip_avg": 0.52,
+         "temp_avg": 62.67
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.88,
+         "temp_avg": 48.97
+      },
+      {
+         "season": "Spring",
+         "precip_day": 17,
+         "precip_avg": 0.52,
+         "temp_avg": 58.53
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.11,
+         "temp_avg": 74.9
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.31,
+         "temp_avg": 62.67
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 0.58,
+         "temp_avg": 48.8
+      },
+      {
+         "season": "Spring",
+         "precip_day": 24,
+         "precip_avg": 0.55,
+         "temp_avg": 56.53
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 75.33
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.1,
+         "temp_avg": 61.93
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 19,
+         "precip_avg": 0.36,
+         "temp_avg": 46.97
+      },
+      {
+         "season": "Spring",
+         "precip_day": 6,
+         "precip_avg": 0.28,
+         "temp_avg": 60.13
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 72.9
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.42,
+         "temp_avg": 61.67
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 25,
+         "precip_avg": 0.79,
+         "temp_avg": 46.17
+      },
+      {
+         "season": "Spring",
+         "precip_day": 3,
+         "precip_avg": 0.14,
+         "temp_avg": 58
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 75.13
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.34,
+         "temp_avg": 64.17
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 25,
+         "precip_avg": 0.41,
+         "temp_avg": 47.37
+      },
+      {
+         "season": "Spring",
+         "precip_day": 6,
+         "precip_avg": 0.36,
+         "temp_avg": 61.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 73.63
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.43,
+         "temp_avg": 63.27
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 29,
+         "precip_avg": 0.81,
+         "temp_avg": 49.43
+      },
+      {
+         "season": "Spring",
+         "precip_day": 17,
+         "precip_avg": 0.41,
+         "temp_avg": 54.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.93
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.25,
+         "temp_avg": 62.9
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 11,
+         "precip_avg": 0.63,
+         "temp_avg": 47
+      },
+      {
+         "season": "Spring",
+         "precip_day": 22,
+         "precip_avg": 0.46,
+         "temp_avg": 55.37
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.19,
+         "temp_avg": 72
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.26,
+         "temp_avg": 62.9
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 1.02,
+         "temp_avg": 48.67
+      },
+      {
+         "season": "Spring",
+         "precip_day": 17,
+         "precip_avg": 0.46,
+         "temp_avg": 57.67
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 74.03
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.44,
+         "temp_avg": 64.13
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 4,
+         "precip_avg": 0.43,
+         "temp_avg": 46.37
+      },
+      {
+         "season": "Spring",
+         "precip_day": 6,
+         "precip_avg": 0.28,
+         "temp_avg": 60.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.09,
+         "temp_avg": 74.67
+      },
+      {
+         "season": "Fall",
+         "precip_day": 4,
+         "precip_avg": 0.32,
+         "temp_avg": 62.3
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 22,
+         "precip_avg": 0.67,
+         "temp_avg": 51.8
+      },
+      {
+         "season": "Spring",
+         "precip_day": 10,
+         "precip_avg": 0.36,
+         "temp_avg": 61.07
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 75.67
+      },
+      {
+         "season": "Fall",
+         "precip_day": 10,
+         "precip_avg": 0.28,
+         "temp_avg": 64.43
+      }
+   ]
+}, 
+"Santa_Barbara":
+    {
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 22,
+         "precip_avg": 0.58,
+         "temp_avg": 57.07
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 63.27
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.02,
+         "temp_avg": 68.17
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.23,
+         "temp_avg": 68.17
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.76,
+         "temp_avg": 55.83
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 23,
+         "precip_avg": 0.36,
+         "temp_avg": 59.33
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 67.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.07,
+         "temp_avg": 63.7
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 13,
+         "precip_avg": 0.17,
+         "temp_avg": 56.73
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.3,
+         "temp_avg": 57.33
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.01,
+         "temp_avg": 64.63
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.13,
+         "temp_avg": 63.53
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 21,
+         "precip_avg": 0.4,
+         "temp_avg": 56.63
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 12,
+         "precip_avg": 0.51,
+         "temp_avg": 60.27
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.03,
+         "temp_avg": 66.67
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.34,
+         "temp_avg": 62.9
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 29,
+         "precip_avg": 0.61,
+         "temp_avg": 54.27
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 9,
+         "precip_avg": 0.64,
+         "temp_avg": 59.43
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 65.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.56,
+         "temp_avg": 63.5
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 0.43,
+         "temp_avg": 55.83
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 7,
+         "precip_avg": 0.08,
+         "temp_avg": 58
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 65.13
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.6,
+         "temp_avg": 62.57
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 14,
+         "precip_avg": 0.29,
+         "temp_avg": 57.8
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 10,
+         "precip_avg": 1.19,
+         "temp_avg": 59.53
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.03,
+         "temp_avg": 67.23
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.38,
+         "temp_avg": 63.63
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 17,
+         "precip_avg": 0.63,
+         "temp_avg": 55.57
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 3,
+         "precip_avg": 0.2,
+         "temp_avg": 62.33
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 66.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.25,
+         "temp_avg": 64.23
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 27,
+         "precip_avg": 0.79,
+         "temp_avg": 57.3
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 13,
+         "precip_avg": 0.38,
+         "temp_avg": 61.17
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 65.87
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.65,
+         "temp_avg": 64.03
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 14,
+         "precip_avg": 0.46,
+         "temp_avg": 56.5
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 26,
+         "precip_avg": 0.45,
+         "temp_avg": 57.9
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.03,
+         "temp_avg": 66.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 6,
+         "precip_avg": 0.11,
+         "temp_avg": 64.9
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 15,
+         "precip_avg": 0.39,
+         "temp_avg": 55.45
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 5,
+         "precip_avg": 0.13,
+         "temp_avg": 60.2
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 68.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.08,
+         "temp_avg": 58.9
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 24,
+         "precip_avg": 0.72,
+         "temp_avg": 53.6
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 3,
+         "precip_avg": 0.06,
+         "temp_avg": 57.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 65.65
+      },
+      {
+         "season": "Fall",
+         "precip_day": 24,
+         "precip_avg": 0.21,
+         "temp_avg": 57.9
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 27,
+         "precip_avg": 0.53,
+         "temp_avg": 55.9
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 6,
+         "precip_avg": 0.13,
+         "temp_avg": 62.17
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.11,
+         "temp_avg": 69.27
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.43,
+         "temp_avg": 66.93
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 25,
+         "precip_avg": 0.64,
+         "temp_avg": 58.5
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 8,
+         "precip_avg": 0.39,
+         "temp_avg": 64.6
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 67.73
+      },
+      {
+         "season": "Fall",
+         "precip_day": 15,
+         "precip_avg": 0.18,
+         "temp_avg": 62.9
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 12,
+         "precip_avg": 0.36,
+         "temp_avg": 56.8
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.34,
+         "temp_avg": 62.75
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.05,
+         "temp_avg": 65.13
+      },
+      {
+         "season": "Fall",
+         "precip_day": 8,
+         "precip_avg": 0.32,
+         "temp_avg": 57.3
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 18,
+         "precip_avg": 0.42,
+         "temp_avg": 55.57
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 13,
+         "precip_avg": 0.31,
+         "temp_avg": 59.63
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 66.57
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.11,
+         "temp_avg": 65.3
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 7,
+         "precip_avg": 0.2,
+         "temp_avg": 54.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 7,
+         "precip_avg": 0.12,
+         "temp_avg": 61.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 66.8
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.13,
+         "temp_avg": 61.8
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 17,
+         "precip_avg": 0.4,
+         "temp_avg": 58.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 8,
+         "precip_avg": 0.29,
+         "temp_avg": 63.9
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 69.03
+      },
+      {
+         "season": "Fall",
+         "precip_day": 4,
+         "precip_avg": 0.15,
+         "temp_avg": 67.97
+      }
+   ]
+},
+"Paso_Robles":
+    {
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 21,
+         "precip_avg": 0.32,
+         "temp_avg": 49.1
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 62.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.23
+      },
+      {
+         "season": "Fall",
+         "precip_day": 10,
+         "precip_avg": 0.16,
+         "temp_avg": 63.53
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 32,
+         "precip_avg": 0.27,
+         "temp_avg": 47.77
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 26,
+         "precip_avg": 0.23,
+         "temp_avg": 55.6
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.7
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.17,
+         "temp_avg": 60.57
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 13,
+         "precip_avg": 0.23,
+         "temp_avg": 48.57
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.14,
+         "temp_avg": 55.23
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 70.87
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.1,
+         "temp_avg": 63.97
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 26,
+         "precip_avg": 0.21,
+         "temp_avg": 51.17
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 12,
+         "precip_avg": 0.19,
+         "temp_avg": 60.3
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.02,
+         "temp_avg": 73.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.1,
+         "temp_avg": 60.43
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 32,
+         "precip_avg": 0.3,
+         "temp_avg": 46.47
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 13,
+         "precip_avg": 0.3,
+         "temp_avg": 59.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 72.3
+      },
+      {
+         "season": "Fall",
+         "precip_day": 8,
+         "precip_avg": 0.18,
+         "temp_avg": 62.77
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 19,
+         "precip_avg": 0.19,
+         "temp_avg": 47.47
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 8,
+         "precip_avg": 0.13,
+         "temp_avg": 56.57
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 71.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.17,
+         "temp_avg": 61.63
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 24,
+         "precip_avg": 0.14,
+         "temp_avg": 49.2
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.29,
+         "temp_avg": 57
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 73.2
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.15,
+         "temp_avg": 62.53
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 20,
+         "precip_avg": 0.41,
+         "temp_avg": 47.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 5,
+         "precip_avg": 0.05,
+         "temp_avg": 60.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 71.7
+      },
+      {
+         "season": "Fall",
+         "precip_day": 14,
+         "precip_avg": 0.29,
+         "temp_avg": 59.53
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 38,
+         "precip_avg": 0.27,
+         "temp_avg": 50.37
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 19,
+         "precip_avg": 0.2,
+         "temp_avg": 57.97
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.03,
+         "temp_avg": 72.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.05,
+         "temp_avg": 61.2
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 18,
+         "precip_avg": 0.33,
+         "temp_avg": 48.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 28,
+         "precip_avg": 0.47,
+         "temp_avg": 55.8
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 74.07
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.22,
+         "temp_avg": 60.5
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 14,
+         "precip_avg": 0.24,
+         "temp_avg": 46.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 5,
+         "precip_avg": 0.04,
+         "temp_avg": 60.2
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.05,
+         "temp_avg": 73.17
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.05,
+         "temp_avg": 60.83
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 23,
+         "precip_avg": 0.3,
+         "temp_avg": 47.1
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 3,
+         "precip_avg": 0.07,
+         "temp_avg": 57.2
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 73.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 8,
+         "precip_avg": 0.05,
+         "temp_avg": 63.3
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 24,
+         "precip_avg": 0.22,
+         "temp_avg": 48.13
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 10,
+         "precip_avg": 0.08,
+         "temp_avg": 58.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 71.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.32,
+         "temp_avg": 61.33
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 32,
+         "precip_avg": 0.41,
+         "temp_avg": 50.47
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 16,
+         "precip_avg": 0.09,
+         "temp_avg": 55.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 71.23
+      },
+      {
+         "season": "Fall",
+         "precip_day": 10,
+         "precip_avg": 0.12,
+         "temp_avg": 61.87
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 10,
+         "precip_avg": 0.33,
+         "temp_avg": 47.33
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 20,
+         "precip_avg": 0.21,
+         "temp_avg": 57
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.02,
+         "temp_avg": 70.97
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.18,
+         "temp_avg": 62.53
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 19,
+         "precip_avg": 0.24,
+         "temp_avg": 48.83
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 12,
+         "precip_avg": 0.26,
+         "temp_avg": 58.53
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.05,
+         "temp_avg": 63.67
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 9,
+         "precip_avg": 0.14,
+         "temp_avg": 46.47
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 6,
+         "precip_avg": 0.06,
+         "temp_avg": 62.1
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 73.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 5,
+         "precip_avg": 0.04,
+         "temp_avg": 62
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 20,
+         "precip_avg": 0.25,
+         "temp_avg": 53.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 11,
+         "precip_avg": 0.11,
+         "temp_avg": 61.97
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 73.9
+      },
+      {
+         "season": "Fall",
+         "precip_day": 4,
+         "precip_avg": 0.35,
+         "temp_avg": 65.5
+      }
+   ]
+},
+"Santa_Lucia_Highlands":
+    {
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 28,
+         "precip_avg": 0.31,
+         "temp_avg": 52.93
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 12,
+         "precip_avg": 0.04,
+         "temp_avg": 58.63
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.04,
+         "temp_avg": 63.53
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.18,
+         "temp_avg": 62.73
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 49,
+         "precip_avg": 0.39,
+         "temp_avg": 51.93
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 38,
+         "precip_avg": 0.25,
+         "temp_avg": 56.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 10,
+         "precip_avg": 0.01,
+         "temp_avg": 61.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 17,
+         "precip_avg": 0.29,
+         "temp_avg": 59.13
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 28,
+         "precip_avg": 0.17,
+         "temp_avg": 51.97
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 24,
+         "precip_avg": 0.2,
+         "temp_avg": 53.43
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.03,
+         "temp_avg": 60.77
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.12,
+         "temp_avg": 59.27
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 38,
+         "precip_avg": 0.24,
+         "temp_avg": 53.67
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 18,
+         "precip_avg": 0.18,
+         "temp_avg": 56.6
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 61.15
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.22,
+         "temp_avg": 61.35
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 41,
+         "precip_avg": 0.3,
+         "temp_avg": 51.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 18,
+         "precip_avg": 0.14,
+         "temp_avg": 56
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.01,
+         "temp_avg": 61.1
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.17,
+         "temp_avg": 59.27
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 27,
+         "precip_avg": 0.26,
+         "temp_avg": 52.07
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 18,
+         "precip_avg": 0.13,
+         "temp_avg": 54.83
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.01,
+         "temp_avg": 60.8
+      },
+      {
+         "season": "Fall",
+         "precip_day": 7,
+         "precip_avg": 0.13,
+         "temp_avg": 59.9
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.26,
+         "temp_avg": 54.23
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 26,
+         "precip_avg": 0.15,
+         "temp_avg": 55.87
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.01,
+         "temp_avg": 62.73
+      },
+      {
+         "season": "Fall",
+         "precip_day": 14,
+         "precip_avg": 0.1,
+         "temp_avg": 59.8
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 31,
+         "precip_avg": 0.34,
+         "temp_avg": 51.87
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 5,
+         "precip_avg": 0.06,
+         "temp_avg": 58.47
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.02,
+         "temp_avg": 62.53
+      },
+      {
+         "season": "Fall",
+         "precip_day": 16,
+         "precip_avg": 0.21,
+         "temp_avg": 59.33
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 41,
+         "precip_avg": 0.3,
+         "temp_avg": 53.63
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 26,
+         "precip_avg": 0.22,
+         "temp_avg": 57.47
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.04,
+         "temp_avg": 61.6
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.06,
+         "temp_avg": 58.97
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 29,
+         "precip_avg": 0.21,
+         "temp_avg": 52.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 38,
+         "precip_avg": 0.28,
+         "temp_avg": 54.8
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.01,
+         "temp_avg": 61.33
+      },
+      {
+         "season": "Fall",
+         "precip_day": 13,
+         "precip_avg": 0.06,
+         "temp_avg": 57.17
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 28,
+         "precip_avg": 0.18,
+         "temp_avg": 49.1
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.1,
+         "temp_avg": 54.07
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 59.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 14,
+         "precip_avg": 0.14,
+         "temp_avg": 57.7
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 40,
+         "precip_avg": 0.28,
+         "temp_avg": 49.23
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 8,
+         "precip_avg": 0.08,
+         "temp_avg": 52.9
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 59.53
+      },
+      {
+         "season": "Fall",
+         "precip_day": 12,
+         "precip_avg": 0.08,
+         "temp_avg": 58.77
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 34,
+         "precip_avg": 0.27,
+         "temp_avg": 51.5
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.15,
+         "temp_avg": 53.83
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.03,
+         "temp_avg": 60.17
+      },
+      {
+         "season": "Fall",
+         "precip_day": 8,
+         "precip_avg": 0.34,
+         "temp_avg": 57.4
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 43,
+         "precip_avg": 0.3,
+         "temp_avg": 52.13
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 24,
+         "precip_avg": 0.26,
+         "temp_avg": 53.47
+      },
+      {
+         "season": "Summer",
+         "precip_day": 12,
+         "precip_avg": 0.01,
+         "temp_avg": 59.47
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.11,
+         "temp_avg": 57.23
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 0.33,
+         "temp_avg": 50.13
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 26,
+         "precip_avg": 0.17,
+         "temp_avg": 53.67
+      },
+      {
+         "season": "Summer",
+         "precip_day": 13,
+         "precip_avg": 0.05,
+         "temp_avg": 58.5
+      },
+      {
+         "season": "Fall",
+         "precip_day": 17,
+         "precip_avg": 0.15,
+         "temp_avg": 57.17
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 26,
+         "precip_avg": 0.22,
+         "temp_avg": 50.8
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 22,
+         "precip_avg": 0.21,
+         "temp_avg": 53.5
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.06,
+         "temp_avg": 58.17
+      },
+      {
+         "season": "Fall",
+         "precip_day": 18,
+         "precip_avg": 0.15,
+         "temp_avg": 57.93
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 16,
+         "precip_avg": 0.13,
+         "temp_avg": 49.1
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.06,
+         "temp_avg": 54.57
+      },
+      {
+         "season": "Summer",
+         "precip_day": 11,
+         "precip_avg": 0.01,
+         "temp_avg": 60.23
+      },
+      {
+         "season": "Fall",
+         "precip_day": 8,
+         "precip_avg": 0.12,
+         "temp_avg": 57.5
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.31,
+         "temp_avg": 53.93
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 21,
+         "precip_avg": 0.16,
+         "temp_avg": 56.67
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.01,
+         "temp_avg": 61.8
+      },
+      {
+         "season": "Fall",
+         "precip_day": 12,
+         "precip_avg": 0.28,
+         "temp_avg": 61.03
+      }
+   ]
+},
+"Anderson_Valley":
+    {
+   "1997": [
+      {
+         "season": "Winter",
+         "precip_day": 30,
+         "precip_avg": 0.52,
+         "temp_avg": 48.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 16,
+         "precip_avg": 0.3,
+         "temp_avg": 59.07
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.22,
+         "temp_avg": 70.3
+      },
+      {
+         "season": "Fall",
+         "precip_day": 30,
+         "precip_avg": 0.38,
+         "temp_avg": 60.37
+      }
+   ],
+   "1998": [
+      {
+         "season": "Winter",
+         "precip_day": 63,
+         "precip_avg": 0.54,
+         "temp_avg": 46.77
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 42,
+         "precip_avg": 0.35,
+         "temp_avg": 54.17
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.02,
+         "temp_avg": 71.57
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.43,
+         "temp_avg": 59.53
+      }
+   ],
+   "1999": [
+      {
+         "season": "Winter",
+         "precip_day": 34,
+         "precip_avg": 0.46,
+         "temp_avg": 46.23
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 23,
+         "precip_avg": 0.28,
+         "temp_avg": 54.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.17,
+         "temp_avg": 69
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.44,
+         "temp_avg": 57.95
+      }
+   ],
+   "2000": [
+      {
+         "season": "Winter",
+         "precip_day": 46,
+         "precip_avg": 0.41,
+         "temp_avg": 48.37
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 24,
+         "precip_avg": 0.35,
+         "temp_avg": 57.6
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.2,
+         "temp_avg": 71.07
+      },
+      {
+         "season": "Fall",
+         "precip_day": 19,
+         "precip_avg": 0.29,
+         "temp_avg": 59.17
+      }
+   ],
+   "2001": [
+      {
+         "season": "Winter",
+         "precip_day": 51,
+         "precip_avg": 0.51,
+         "temp_avg": 45.63
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 15,
+         "precip_avg": 0.2,
+         "temp_avg": 58.67
+      },
+      {
+         "season": "Summer",
+         "precip_day": 4,
+         "precip_avg": 0.09,
+         "temp_avg": 71.8
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.3,
+         "temp_avg": 62.17
+      }
+   ],
+   "2002": [
+      {
+         "season": "Winter",
+         "precip_day": 38,
+         "precip_avg": 0.55,
+         "temp_avg": 48.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 20,
+         "precip_avg": 0.21,
+         "temp_avg": 55.97
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.4
+      },
+      {
+         "season": "Fall",
+         "precip_day": 11,
+         "precip_avg": 0.16,
+         "temp_avg": 61.13
+      }
+   ],
+   "2003": [
+      {
+         "season": "Winter",
+         "precip_day": 48,
+         "precip_avg": 0.34,
+         "temp_avg": 49.17
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 37,
+         "precip_avg": 0.29,
+         "temp_avg": 55.2
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.57
+      },
+      {
+         "season": "Fall",
+         "precip_day": 18,
+         "precip_avg": 0.15,
+         "temp_avg": 60.97
+      }
+   ],
+   "2004": [
+      {
+         "season": "Winter",
+         "precip_day": 49,
+         "precip_avg": 0.53,
+         "temp_avg": 47.4
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 13,
+         "precip_avg": 0.12,
+         "temp_avg": 59.13
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 71.77
+      },
+      {
+         "season": "Fall",
+         "precip_day": 24,
+         "precip_avg": 0.21,
+         "temp_avg": 59.43
+      }
+   ],
+   "2005": [
+      {
+         "season": "Winter",
+         "precip_day": 52,
+         "precip_avg": 0.51,
+         "temp_avg": 48.43
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 33,
+         "precip_avg": 0.39,
+         "temp_avg": 55.97
+      },
+      {
+         "season": "Summer",
+         "precip_day": 9,
+         "precip_avg": 0.09,
+         "temp_avg": 71.47
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.19,
+         "temp_avg": 59.23
+      }
+   ],
+   "2006": [
+      {
+         "season": "Winter",
+         "precip_day": 46,
+         "precip_avg": 0.4,
+         "temp_avg": 47.73
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 46,
+         "precip_avg": 0.34,
+         "temp_avg": 54.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0.01,
+         "temp_avg": 73.7
+      },
+      {
+         "season": "Fall",
+         "precip_day": 22,
+         "precip_avg": 0.11,
+         "temp_avg": 59.87
+      }
+   ],
+   "2007": [
+      {
+         "season": "Winter",
+         "precip_day": 37,
+         "precip_avg": 0.36,
+         "temp_avg": 44.97
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 16,
+         "precip_avg": 0.18,
+         "temp_avg": 58.27
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 71.47
+      },
+      {
+         "season": "Fall",
+         "precip_day": 25,
+         "precip_avg": 0.09,
+         "temp_avg": 58.97
+      }
+   ],
+   "2008": [
+      {
+         "season": "Winter",
+         "precip_day": 50,
+         "precip_avg": 0.4,
+         "temp_avg": 45.47
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 12,
+         "precip_avg": 0.08,
+         "temp_avg": 55.5
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 72.37
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.26,
+         "temp_avg": 61.37
+      }
+   ],
+   "2009": [
+      {
+         "season": "Winter",
+         "precip_day": 45,
+         "precip_avg": 0.24,
+         "temp_avg": 46.43
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 20,
+         "precip_avg": 0.29,
+         "temp_avg": 56.7
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 71.73
+      },
+      {
+         "season": "Fall",
+         "precip_day": 23,
+         "precip_avg": 0.16,
+         "temp_avg": 60.37
+      }
+   ],
+   "2010": [
+      {
+         "season": "Winter",
+         "precip_day": 64,
+         "precip_avg": 0.41,
+         "temp_avg": 49.03
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 36,
+         "precip_avg": 0.39,
+         "temp_avg": 52.73
+      },
+      {
+         "season": "Summer",
+         "precip_day": 6,
+         "precip_avg": 0.01,
+         "temp_avg": 70.83
+      },
+      {
+         "season": "Fall",
+         "precip_day": 26,
+         "precip_avg": 0.32,
+         "temp_avg": 59.77
+      }
+   ],
+   "2011": [
+      {
+         "season": "Winter",
+         "precip_day": 25,
+         "precip_avg": 0.26,
+         "temp_avg": 46.37
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 40,
+         "precip_avg": 0.26,
+         "temp_avg": 53.4
+      },
+      {
+         "season": "Summer",
+         "precip_day": 9,
+         "precip_avg": 0.09,
+         "temp_avg": 71
+      },
+      {
+         "season": "Fall",
+         "precip_day": 19,
+         "precip_avg": 0.26,
+         "temp_avg": 61.17
+      }
+   ],
+   "2012": [
+      {
+         "season": "Winter",
+         "precip_day": 33,
+         "precip_avg": 0.55,
+         "temp_avg": 46.9
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 30,
+         "precip_avg": 0.28,
+         "temp_avg": 55.77
+      },
+      {
+         "season": "Summer",
+         "precip_day": 5,
+         "precip_avg": 0.01,
+         "temp_avg": 71.67
+      },
+      {
+         "season": "Fall",
+         "precip_day": 19,
+         "precip_avg": 0.34,
+         "temp_avg": 62.27
+      }
+   ],
+   "2013": [
+      {
+         "season": "Winter",
+         "precip_day": 11,
+         "precip_avg": 0.29,
+         "temp_avg": 45.63
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 14,
+         "precip_avg": 0.21,
+         "temp_avg": 58.8
+      },
+      {
+         "season": "Summer",
+         "precip_day": 7,
+         "precip_avg": 0.03,
+         "temp_avg": 73.17
+      },
+      {
+         "season": "Fall",
+         "precip_day": 9,
+         "precip_avg": 0.12,
+         "temp_avg": 60.43
+      }
+   ],
+   "2014": [
+      {
+         "season": "Winter",
+         "precip_day": 36,
+         "precip_avg": 0.48,
+         "temp_avg": 50.87
+      },
+      {
+         "season": "Spring ",
+         "precip_day": 21,
+         "precip_avg": 0.22,
+         "temp_avg": 59.83
+      },
+      {
+         "season": "Summer",
+         "precip_day": 3,
+         "precip_avg": 0,
+         "temp_avg": 74.57
+      },
+      {
+         "season": "Fall",
+         "precip_day": 21,
+         "precip_avg": 0.27,
+         "temp_avg": 63.53
+      }
+   ]
+}
+}
