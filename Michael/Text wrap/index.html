@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<style>
+  svg {
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 425px;
+    margin: 25px;
+    width: 900px;
+  }
+  .type {
+    fill: #888;
+    text-anchor: middle;
+  }
+  .shape {
+    fill: #eee;
+    stroke: #ccc;
+  }
+</style>
+
+<svg>
+
+  <!-- Text that will use the D3plus default wrapping. -->
+  <text class="type" dy="15px" x="75px">Wrapped</text>
+
+  <rect class="shape" height="150px" width="150px" y="50px"></rect>
+  <text id="rectWrap" class="wrap" y="50px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+  <circle class="shape" r="75px" cx="75px" cy="300px"></circle>
+  <text id="circleWrap" class="wrap" y="225px" x="0px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+  <!-- Text that D3plus will resize to fit the available space. -->
+  <text class="type" dy="15px" x="275px">Resized</text>
+
+  <rect class="shape" height="150px" width="150px" y="50px" x="200px"></rect>
+  <text id="rectResize" class="wrap" y="50px" x="200px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+  <circle class="shape" r="75px" cx="275px" cy="300px"></circle>
+  <text id="circleResize" class="wrap" y="225px" x="200px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+  <!-- For comparison, how SVG would display the text without D3plus. -->
+  <text class="type" dy="15px" x="475px">Default Behavior</text>
+
+  <rect class="shape" height="150px" width="150px" y="50px" x="400px"></rect>
+  <text class="wrap" y="50px" x="400px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+  <circle class="shape" r="75px" cx="475px" cy="300px"></circle>
+  <text class="wrap" y="225px" x="400px" font-size="12">
+    Here is a long text string that SVG should wrap by default, but it does not.
+  </text>
+
+</svg>
+
+<svg id="test" height=400 width=400>
+</svg>
+
+<script>
+  var svg= d3.select("#test")
+
+  svg.append("rect")
+  .attr("x", 100)
+  .attr("y", 100)
+  .attr("height", 200)
+  .attr("width", 200)
+  .style("fill", "none")
+
+  svg.append("text")
+  .text("hello there, this is a very very very long string for testing purposes")
+  .attr("id", "txtwrap")
+  .attr("x", 100)
+  .attr("y", 100)
+  .call(wrap, 200)
+
+  function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 12, // ems
+        y = text.attr("y"),
+        dy = parseFloat(text.attr("dy")),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+      }
+    }
+  });
+}
+
+  // var wrap= d3.textwrap()
+  // .bounds({height: 200, width: 200})
+  // .method('tspans')
+  //
+  // var txt= d3.select()
+
+  // d3plus.textwrap()
+  // .container(d3.select("#txtwrap"))
+  // .resize(true)
+  // .draw();
+
+  // Wrap text in a rectangle.
+  // d3plus.textwrap()
+  //   .container(d3.select("#rectWrap"))
+  //   .draw();
+  // // Wrap text in a rectangle, and size the text to fit.
+  // d3plus.textwrap()
+  //   .container(d3.select("#rectResize"))
+  //   .resize(true)
+  //   .draw();
+  // // Wrap text in a circle.
+  // d3plus.textwrap()
+  //   .container(d3.select("#circleWrap"))
+  //   .draw();
+  // // Wrap text in a circle, and size the text to fit.
+  // d3plus.textwrap()
+  //   .container(d3.select("#circleResize"))
+  //   .resize(true)
+  //   .draw();
+</script>

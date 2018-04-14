@@ -1,0 +1,1473 @@
+<!doctype html>
+
+<!--#712541 : wine red-->
+<!--#25712B : dark green-->
+<head>
+    <title> maps and sliders </title>
+    <!-- <script src="https://d3plus.org/js/d3.js"></script>
+    <script src="https://d3plus.org/js/d3plus.js"></script> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Forum" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
+    <style>
+        .subunit.Sonoma,
+        .subunit.Napa,
+        .subunit.Santa.Barbara,
+        .subunit.Mendocino,
+        .subunit.Monterey,
+        .subunit.San.Luis {
+            fill: #712541;
+            stroke-linejoin: round;
+        }
+
+        .subunit {
+            fill: #e3d9d9;
+            stroke: #efebeb;
+
+            stroke-width: 3px;
+        }
+
+        .subunit:hover {
+            opacity: 0.7;
+            fill: #651c37;
+        }
+
+        .exterior-boundary {
+            fill: none;
+            stroke: #ffffff;
+            stroke-linejoin: round;
+            stroke-width: 2px;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 75px;
+            padding: 2px;
+            font: 12px sans-serif;
+            color: white;
+            background: black;
+            border: 0px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<!--<body style="background-color: #56132c;">-->
+<!--<body style="margin:20px; background-image: url(wood-timber-brown-139306.jpg);">-->
+<body style="margin:20px;">
+
+
+        <!-- -----------------------------ALL HTML---------------------------------------- -->
+    <h1 style="font-family: Forum; font-size:50px; margin-bottom:0; padding-bottom: 0;"> What makes a good wine? </h1>
+    <h2 style="width:48%; float:left; font-family: Oswald;">How does regional weather affect wine ratings? Select a maroon region to find out! Then use the slider to see how weather and ratings change over the years. Curious about a different place? Click again on any maroon area to see the data for this region. </h2>
+
+    <div style="float:right; width:50%; ">
+        <div id = "map"></div>
+        <div class="slidecontainer" style="position:relative; margin-top:-100px; float:center;">
+            <input type="range" min="1997" max="2014" value="1" class="slider" id="slider" style="width:600px;">
+        </div>
+    </div>
+
+<!--    <img src="key.png" id="key_placeholder" style="width:48%; height:300px;">-->
+    <div id="key" style="font-family: Forum;"></div> <!-- SVG for key -->
+
+    <div style="width:300px;">
+        <h2 id="loc" style="display:inline; float:left;font-family: Forum; "></h2>
+        <h2 id="year" style="display:inline; float:right; font-family: Forum; ;"></h2>
+    </div>
+
+    <div id="div1" style="float:left; display:inline; margin-bottom:80px; font-family: Oswald; "> </div>
+    <div style="width:30%; float:left; display:inline; font-family: Forum; ">
+        <div id="wine" style="margin-top:-40px; margin-left:575px; "> </div>
+        <h2 id="comment" style="font-family: Oswald; margin-top:-40px; margin-left:500px; width: 500px; "></h2>
+    </div>
+
+    <div id="div2"> </div>
+
+        <!-- -----------------------------CLICKABLE MAP---------------------------------------- -->
+
+    <script>
+	var width = 650, height = 600;
+
+	var projection = d3.geoMercator()
+			         .scale(1000 * 2)
+			         .center([-120, 36])
+			         .translate([width/2, height/2]);
+
+	var path = d3.geoPath()
+		       .projection(projection);
+
+	var svg = d3.select("#map").append("svg")
+		      .attr("width", width)
+		      .attr("height", height);
+
+    function county_to_winery (location) {
+        if(location === "Sonoma")
+            return ["Sonoma", "Sonoma"];
+        if(location === "Napa")
+            return ["Napa", "Napa"];
+        if(location === "Mendocino")
+            return ["Anderson Valley", "Anderson_Valley"];
+        if(location === "Monterey")
+            return ["Santa Lucia Highlands", "Santa_Lucia_Highlands"];
+        if(location === "San Luis Obispo")
+            return ["Paso Robles", "Paso_Robles"];
+        if(location === "Santa Barbara")
+            return ["Santa Barbara", "Santa_Barbara"];
+        else
+            return [""]
+    }
+	d3.json("caCountiesTopoSimple.json", function(error, data) {
+		svg.append("path")
+			.datum(topojson.feature(data, data.objects.subunits))
+			.attr("class", "land")
+			.attr("d", path);
+
+		//bind feature data to the map
+		svg.selectAll(".subunit")
+			  .data(topojson.feature(data, data.objects.subunits).features)
+			.enter().append("path")
+			.attr("class", function(d) { return "subunit " + d.properties.name; })
+			.attr("d", path)
+			.on("mouseover", function(d){ //tooltip
+                var s = county_to_winery(d.properties.name);
+                if(s[0] !== ""){
+				div.transition()
+					.duration(200)
+					.style("opacity", .9);
+				div.html(s[0] + ", " + d.properties.fullName)
+					.style("left", (d3.event.pageX) + 10 + "px")
+					.style("top", (d3.event.pageY - 30) + "px");
+                }
+			})
+			.on("mouseout", function(d) {
+				div.transition().duration(500).style("opacity", 0.0);
+			})
+            .on("click", function(d) {
+                var s = county_to_winery(d.properties.name);
+                if(s[0] !== ""){
+                    filter(s[1]);
+                    document.getElementById("loc").innerHTML = s[0];
+                }
+            });
+
+		//tooltop declaration
+		var div = d3.select("#map").append("div")
+			.attr("class", "tooltip")
+			.style("opacity", 0);
+	   });
+    </script>
+
+    <!-- -----------------------------FILTER DATA---------------------------------------- -->
+
+    <script>
+
+        var seasons_data;
+        var wine_data;
+        var s_filtered;
+        var w_filtered;
+
+        d3.json("seasons_data.json", function(error1, data1) {
+            d3.json("wine_data.json", function(error2, data2) {
+                //if(error1) console.log(error1);
+                //if(error2) console.log(error2);
+
+                seasons_data = data1;
+                wine_data = data2;
+            });
+        });
+
+        function filter_help (data, key) {
+            try {
+                var keys = Object.keys(data);
+                var vals = Object.values(data);
+                for (var i in keys){
+                    if (keys[i] === key) return vals[i];
+                }
+            }
+            catch (error) {
+                document.getElementById("msg").innerHTML = "Click on a region first!";
+            }
+        }
+
+        function filter (region) {
+            //console.log(region);
+
+            s_filtered = filter_help(seasons_data, region);
+            w_filtered = filter_help(wine_data, region);
+
+            //console.log(s_filtered);
+            //console.log(w_filtered);
+        }
+
+        function parse_weather_to_array (data){
+            var array = [];
+            for (var i in data){
+                array.push(data[i].precip_day);
+                array.push(data[i].precip_avg);
+                array.push(data[i].temp_avg);
+            }
+            return array;
+        }
+
+        var slider = document.getElementById("slider");
+
+        slider.oninput = function(){
+            var year = this.value;
+//            console.log(year);
+            var weather_yearly = filter_help(s_filtered, String(year));
+            var wine_yearly = filter_help(Object.values(w_filtered), String(year-1997));
+//            console.log(weather_yearly);
+//            console.log(wine_yearly);
+            var a = parse_weather_to_array(weather_yearly);
+//            console.log(a);
+            update_weather_image(a);
+            update_wine_image(Object.values(wine_yearly)[0]);
+            document.getElementById("year").innerHTML = year;
+        }
+
+  </script>
+
+    <!-- -----------------------------SCALE WEATHER DATA---------------------------------------- -->
+
+    <script>
+
+    //Svg Dimensions
+    var svg_height= 400
+    var svg_width= 1500
+
+    //Placeholder empty svg
+    d3.select("#div1").append("svg")
+    .attr("id", "weather_image")
+    .attr("height", svg_height)
+    .attr("width", svg_width)
+//    .attr("viewBox", "0 0 800 2400");
+
+    //Set of Scales
+    var sqrt_scale= d3.scalePow()
+    .exponent([0.5])
+
+    var total_rain_linear= d3.scaleLinear()
+    .domain([0, 100])
+    .range([0, 1500])
+
+    var total_rain_linear_area= function (value) {
+      return sqrt_scale(total_rain_linear(value))
+    }
+
+    var resizing= d3.scaleLinear()
+    .domain([0, 10])
+    .range([0, 40])
+
+    var total_rain_decile= d3.scaleQuantile()
+    .domain([0, 0.00500001, 0.028000001, 0.0904000001, 0.144700001, 0.210100001, 0.26200001, 0.31960001, 0.391200001, 0.51040001, 1.18500001])
+    .range([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+    var total_rain_decile_resized= function(value) {
+      return resizing(total_rain_decile(value))
+    }
+
+    var total_rain_scale_final= total_rain_decile_resized
+
+    var rainy_day_quantile= d3.scaleQuantile()
+    .domain([0, 0.9, 4.0000, 7.0000, 13.0000, 22.0000, 53.0000])
+    .range([0, 1, 2, 3, 4, 5])
+
+    var avg_temp_linear= d3.scaleLinear()
+    .domain([0, 100])
+    .range([0, 2000])
+
+    var avg_temp_linear_area= function (value) {
+      return sqrt_scale(avg_temp_linear(value))
+    }
+
+    var avg_temp_decile= d3.scaleQuantile()
+    .domain([0, 49.10000001, 53.38000000001, 55.89000000001, 57.65330000001, 59.5000000001, 61.180000001, 62.738300001, 65.166700001, 70.8767000001, 76.133300000001])
+    .range([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+    var avg_temp_decile_resized= function(value) {
+      return resizing(avg_temp_decile(value))
+    }
+
+    var avg_temp_scale_final= avg_temp_decile_resized
+
+
+    //For demo purposes
+    var demo_array= [0.182033333, 53.0000, 45,
+      0.182033333, 5.0000, 49,
+      0.584383333, 30.1000, 54,
+      1.018444444, 53.0000, 77]
+
+    //barn color scheme
+    var winterfield1= "#DCE3E4"
+    var winterfield2= "#B9C7C9"
+    var winterfield3= "#757D7F"
+    var winterfield4= "#4F5354"
+    var wintertree1= "#D3E3D5"
+    var wintertree2= "#9CB49F"
+    var winterbarntop= "#CEC9C9"
+
+    var springfield1= "#B57449"
+    var springfield2= "#9B643F"
+    var springfield3= "#81DEAF"
+    var springfield4= "#A4E4A5"
+    var springtree1= "#A0F2A2"
+    var springtree2= "#A3F9CE"
+    var springbarntop= "#F9B7C0"
+
+    var summerfield1= "#FEDB41"
+    var summerfield2= "#FCBF29"
+    var summerfield3= "#10BB67"
+    var summerfield4= "#32D736"
+    var summertree1= "#32D736"
+    var summertree2= "#10BB67"
+    var summerbarntop= "#DD122F"
+
+    var fallfield1= "#F8B610"
+    var fallfield2= "#EBA709"
+    var fallfield3= "#FEDB41"
+    var fallfield4= "#FCBF29"
+    var falltree1= "#FF8A05"
+    var falltree2= "#FF5005"
+    var fallbarntop= "#C00B23"
+
+    var textsize= 70
+
+    var barnColor= function(element, season) {
+      if (season == "winter") {
+        if (element == 1) {return winterfield1}
+        else if (element == 2) {return winterfield2}
+        else if (element == 3) {return winterfield3}
+        else if (element == 4) {return winterfield4}
+        else if (element == 5) {return wintertree1}
+        else if (element == 6) {return wintertree2}
+        else {return winterbarntop}
+      }
+      else if (season == "spring") {
+        if (element == 1) {return springfield1}
+        else if (element == 2) {return springfield2}
+        else if (element == 3) {return springfield3}
+        else if (element == 4) {return springfield4}
+        else if (element == 5) {return springtree1}
+        else if (element == 6) {return springtree2}
+        else {return springbarntop}
+      }
+      else if (season == "summer") {
+        if (element == 1) {return summerfield1}
+        else if (element == 2) {return summerfield2}
+        else if (element == 3) {return summerfield3}
+        else if (element == 4) {return summerfield4}
+        else if (element == 5) {return summertree1}
+        else if (element == 6) {return summertree2}
+        else {return summerbarntop}
+      }
+      else {
+        if (element == 1) {return fallfield1}
+        else if (element == 2) {return fallfield2}
+        else if (element == 3) {return fallfield3}
+        else if (element == 4) {return fallfield4}
+        else if (element == 5) {return falltree1}
+        else if (element == 6) {return falltree2}
+        else {return fallbarntop}
+      }
+    }
+
+    var plot_barn= function(g_name, season) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (" + (.0008 * (svg_height)) + "," + (.0008 * (svg_height)) + ") translate (-10, 0)")
+
+      inner_image.append("path")
+      .attr("d", "M476.605,34.395c-1.143-1.143-2.461-2.095-3.896-2.813l-60-30C410.629,0.542,408.329,0,406,0H286  l13.447,50.964l151.505,31.763L512,60L476.605,34.395z")
+      .style("fill", barnColor(7, season))
+
+      inner_image.append("path")
+      .attr("d", "M376,60c-8.291,0-15,6.709-15,15v122c0,8.291,6.709,15,15,15h121c8.284,0,15-6.716,15-15V60H376z")
+      .style("fill", "#FEB756")
+
+      inner_image.append("path")
+      .attr("d", "M356.499,34.501c-0.899-1.201-2.399-2.1-3.9-3.001l-60-30C290.501,0.601,288.401,0,286,0  s-4.501,0.601-6.599,1.5l-60,30c-1.501,0.901-3.001,1.8-3.9,3.001L187,55.499c-3.6,2.701-6,7.202-6,12.001V197  c0,8.399,6.599,15,15,15h180c8.401,0,15-6.601,15-15V60L356.499,34.501z")
+      .style("fill", "#FEDBAB")
+
+      inner_image.append("path")
+      .attr("d", "M391,60v137c0,8.399-6.599,15-15,15h-90V0c2.401,0,4.501,0.601,6.599,1.5l60,30  c1.501,0.901,3.001,1.8,3.9,3.001L391,60z")
+      .style("fill", "#FEC478")
+
+      inner_image.append("path")
+      .attr("d", "M316,90h-60c-8.401,0-15,6.599-15,15v92c0,8.399,6.599,15,15,15h60c8.401,0,15-6.601,15-15v-92  C331,96.599,324.401,90,316,90z")
+      .style("fill", "#B25C4A")
+
+      inner_image.append("path")
+      .attr("d", "M331,105v92c0,8.399-6.599,15-15,15h-30V90h30C324.401,90,331,96.599,331,105z")
+      .style("fill", "#8B4330")
+
+      inner_image.append("path")
+      .attr("d", "M90,105v102.8c0,8.401-6.599,15-15,15s-15-6.599-15-15V105c0-8.401,6.599-15,15-15S90,96.599,90,105   z")
+      .style("fill", "#8B4330")
+
+      inner_image.append("path")
+      .attr("d", "M90,105v102.8c0,8.401-6.599,15-15,15V90C83.401,90,90,96.599,90,105z")
+      .style("fill", "#763220")
+
+      inner_image.append("path")
+      .attr("d", "M75,0C31.8,0,0,59.099,0,90c0,32.999,33.6,60,75,60s75-27.001,75-60C150,59.099,118.2,0,75,0z")
+      .style("fill", barnColor(5, season))
+
+      inner_image.append("path")
+      .attr("d", "M150,90c0,32.999-33.6,60-75,60V0C118.2,0,150,59.099,150,90z")
+      .style("fill", barnColor(6, season))
+
+      inner_image.append("path")
+      .attr("d", "M15,182c-8.291,0-15,6.709-15,15v45l30,30h279.789l60-30l55.605-25.605L429.789,182H15z")
+      .style("fill", barnColor(1, season))
+
+      inner_image.append("polygon")
+      .attr("points", "0,242 0,302 30,332 249.789,332 309.789,302 369.789,272 369.789,242 ")
+      .style("fill", barnColor(2, season))
+
+      inner_image.append("polygon")
+      .attr("points", "0,302 0,362 30,392 189.789,392 249.789,362 309.789,332 309.789,302 ")
+      .style("fill", barnColor(1, season))
+
+      inner_image.append("polygon")
+      .attr("points", "0,362 0,422 30,452 128.789,452 189.789,422 249.789,392 249.789,362 ")
+      .style("fill", barnColor(2, season))
+
+      inner_image.append("path")
+      .attr("d", "M0,422v75c0,8.291,6.709,15,15,15h83.789l91-30v-60H0z")
+      .style("fill", barnColor(1, season))
+
+      inner_image.append("path")
+      .attr("d", "M510.958,191.831C508.841,186.116,503.456,182,497,182h-67.211l-331,330h91l72.422-30L481,263.211  L512,197C512,195.165,511.561,193.455,510.958,191.831z")
+      .style("fill", barnColor(3, season))
+
+      inner_image.append("path")
+      .attr("d", "M510.958,191.831L189.789,512h90l72.422-30L481,353.211l31-72.422V197  C512,195.165,511.561,193.455,510.958,191.831z")
+      .style("fill", barnColor(4, season))
+
+      inner_image.append("polygon")
+      .attr("points", "279.789,512 369.789,512 442.211,482 481,443.211 512,370.789 512,280.789 ")
+      .style("fill", barnColor(3, season))
+
+      inner_image.append("path")
+      .attr("d", "M369.789,512h42.422H497c8.291,0,15-6.709,15-15v-83.789v-42.422L369.789,512z")
+      .style("fill", barnColor(4, season))
+
+      inner_image.append("text")
+      .text(season[0].toUpperCase() + season.substring(1))
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .attr("x", 250)
+      .attr("y", 575)
+      .attr("font-size", textsize)
+    }
+
+    var plot_single_snow_cloud= function(g_name) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (" + (.00000018 * (svg_height * svg_width / 2)) + "," + (.00000018 * (svg_height * svg_width / 2)) + ") translate (-230, -250)")
+
+      inner_image.append("path")
+      .attr("d", "M120.576,460.744h-9.621l6.803-6.803c3.475-3.476,3.475-9.11-0.001-12.585   c-3.474-3.474-9.108-3.474-12.584,0l-6.801,6.801v-9.618c0-4.914-3.985-8.899-8.899-8.899c-4.914,0-8.899,3.985-8.899,8.899v9.619   l-6.802-6.802c-3.476-3.474-9.11-3.474-12.585,0c-3.475,3.475-3.475,9.109,0,12.585l6.803,6.803h-9.62   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0,12.585   c1.739,1.738,4.015,2.606,6.293,2.606s4.555-0.869,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   c4.914,0,8.899-3.985,8.899-8.899v-9.618l6.801,6.801c1.739,1.738,4.015,2.606,6.293,2.606c2.277,0,4.555-0.869,6.292-2.606   c3.476-3.475,3.476-9.109,0.001-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899S125.49,460.744,120.576,460.744z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M120.576,347.936h-9.621l6.803-6.803c3.475-3.476,3.475-9.11-0.001-12.585   c-3.474-3.474-9.108-3.474-12.584,0l-6.801,6.801v-9.618c0-4.914-3.985-8.899-8.899-8.899c-4.914,0-8.899,3.985-8.899,8.899v9.619   l-6.802-6.802c-3.476-3.473-9.11-3.475-12.585,0c-3.475,3.475-3.475,9.109,0,12.585l6.803,6.803h-9.62   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0,12.585   c1.739,1.738,4.015,2.606,6.293,2.606s4.555-0.869,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   c4.914,0,8.899-3.985,8.899-8.899v-9.618l6.801,6.801c1.739,1.738,4.015,2.606,6.293,2.606c2.277,0,4.555-0.869,6.292-2.606   c3.476-3.475,3.476-9.109,0.001-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899S125.49,347.936,120.576,347.936z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M284.394,460.744h-9.623l6.804-6.804c3.475-3.475,3.475-9.109-0.001-12.584   c-3.475-3.474-9.109-3.475-12.584,0.001l-6.801,6.801v-9.619c0-4.914-3.985-8.899-8.899-8.899c-4.914,0-8.899,3.985-8.899,8.899   v9.62l-6.801-6.802c-3.475-3.476-9.109-3.475-12.584-0.001c-3.476,3.475-3.476,9.109-0.001,12.584l6.804,6.804h-9.621   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.619l-6.802,6.802c-3.475,3.475-3.475,9.109,0.001,12.584   c1.738,1.738,4.015,2.606,6.292,2.606s4.555-0.869,6.293-2.607l6.801-6.802v9.62c0,4.914,3.985,8.899,8.899,8.899   c4.914,0,8.899-3.985,8.899-8.899v-9.619l6.801,6.801c1.739,1.739,4.015,2.607,6.293,2.607c2.277,0,4.555-0.869,6.292-2.606   c3.476-3.475,3.476-9.109,0.001-12.584l-6.802-6.802h9.621c4.914,0,8.899-3.985,8.899-8.899S289.309,460.744,284.394,460.744z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M284.394,347.936h-9.623l6.804-6.804c3.475-3.475,3.475-9.109-0.001-12.584   c-3.475-3.474-9.109-3.475-12.584,0.001l-6.801,6.801v-9.619c0-4.914-3.985-8.899-8.899-8.899c-4.914,0-8.899,3.985-8.899,8.899   v9.62l-6.801-6.802c-3.475-3.475-9.109-3.476-12.584-0.001c-3.476,3.475-3.476,9.109-0.001,12.584l6.804,6.804h-9.621   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.619l-6.802,6.802c-3.475,3.475-3.475,9.109,0.001,12.584   c1.738,1.738,4.015,2.606,6.292,2.606s4.555-0.869,6.293-2.607l6.801-6.802v9.62c0,4.914,3.985,8.899,8.899,8.899   c4.914,0,8.899-3.985,8.899-8.899v-9.619l6.801,6.801c1.739,1.739,4.015,2.607,6.293,2.607c2.277,0,4.555-0.869,6.292-2.606   c3.476-3.475,3.476-9.109,0.001-12.584l-6.802-6.802h9.621c4.914,0,8.899-3.985,8.899-8.899S289.309,347.936,284.394,347.936z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M448.212,460.744h-9.621l6.803-6.803c3.475-3.476,3.475-9.11,0-12.585   c-3.476-3.474-9.109-3.474-12.585,0l-6.801,6.801v-9.618c0-4.914-3.985-8.899-8.899-8.899s-8.899,3.985-8.899,8.899v9.619   l-6.802-6.802c-3.475-3.474-9.11-3.474-12.584,0c-3.476,3.475-3.476,9.109-0.001,12.585l6.803,6.803h-9.62   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0.001,12.585   c1.738,1.738,4.015,2.606,6.292,2.606c2.277,0,4.555-0.869,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   s8.899-3.985,8.899-8.899v-9.618l6.801,6.801c1.739,1.738,4.015,2.606,6.293,2.606c2.277,0,4.555-0.869,6.293-2.606   c3.475-3.475,3.475-9.109,0-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899S453.126,460.744,448.212,460.744z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M366.303,404.663h-9.621l6.803-6.803c3.475-3.476,3.475-9.11-0.001-12.585   c-3.474-3.474-9.108-3.474-12.584,0l-6.801,6.801v-9.618c0-4.914-3.985-8.899-8.899-8.899s-8.899,3.985-8.899,8.899v9.619   l-6.802-6.802c-3.475-3.474-9.109-3.474-12.585,0c-3.475,3.475-3.475,9.109,0,12.585l6.803,6.803h-9.62   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0,12.585   c1.739,1.739,4.015,2.606,6.293,2.606c2.278,0,4.555-0.868,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   s8.899-3.985,8.899-8.899v-9.618l6.801,6.801c1.739,1.739,4.015,2.606,6.293,2.606c2.277,0,4.555-0.868,6.292-2.606   c3.476-3.475,3.476-9.109,0.001-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899S371.217,404.663,366.303,404.663z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M202.484,404.663h-9.621l6.803-6.803c3.475-3.476,3.475-9.11,0-12.585   c-3.476-3.474-9.109-3.474-12.585,0l-6.801,6.801v-9.618c0-4.914-3.985-8.899-8.899-8.899s-8.899,3.985-8.899,8.899v9.619   l-6.802-6.802c-3.475-3.474-9.11-3.474-12.584,0c-3.476,3.475-3.476,9.109-0.001,12.585l6.803,6.803h-9.62   c-4.914,0-8.899,3.985-8.899,8.899s3.985,8.899,8.899,8.899h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0.001,12.585   c1.738,1.739,4.015,2.606,6.292,2.606s4.555-0.868,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   s8.899-3.985,8.899-8.899v-9.618l6.801,6.801c1.739,1.739,4.015,2.606,6.293,2.606c2.277,0,4.555-0.868,6.293-2.606   c3.475-3.475,3.475-9.109,0-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899S207.399,404.663,202.484,404.663z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M386.003,365.734h9.618l-6.801,6.801c-3.475,3.476-3.475,9.11,0.001,12.585   c1.738,1.738,4.015,2.606,6.292,2.606s4.555-0.869,6.293-2.606l6.802-6.802v9.619c0,4.914,3.985,8.899,8.899,8.899   s8.899-3.985,8.899-8.899v-9.619l6.801,6.802c1.739,1.738,4.015,2.606,6.293,2.606c2.277,0,4.555-0.869,6.293-2.606   c3.475-3.475,3.475-9.109,0-12.585l-6.801-6.801h9.619c4.914,0,8.899-3.985,8.899-8.899s-3.985-8.899-8.899-8.899h-9.621   l6.803-6.803c3.475-3.476,3.475-9.11,0-12.585c-3.476-3.474-9.109-3.474-12.585,0l-6.801,6.801v-9.618   c0-4.914-3.985-8.899-8.899-8.899s-8.899,3.985-8.899,8.899v9.619l-6.802-6.802c-3.475-3.473-9.11-3.475-12.584,0   c-3.476,3.475-3.476,9.109-0.001,12.585l6.803,6.803h-9.62c-4.914,0-8.899,3.985-8.899,8.899S381.089,365.734,386.003,365.734z")
+      .style("fill", "#9FDEF7")
+
+      inner_image.append("path")
+      .attr("d", "M428.615,114.51c-8.699,0-17.082,1.336-24.963,3.804c0.041-1.263,0.097-2.526,0.097-3.804   c0-20.105-5.29-38.973-14.555-55.291c-0.001-0.001-0.001-0.002-0.002-0.004C369.548,20.863,328.73,8.654,328.73,8.654l0.004,0.021   c-11.627-4.08-24.12-6.318-37.139-6.318c-53.41,0-98.066,37.345-109.365,87.34c-6.699-2.238-13.862-3.465-21.314-3.465   c-22.948,0-43.197,11.489-55.344,29.022c-6.78-1.753-13.886-2.694-21.214-2.694C37.766,112.559,0,150.328,0,196.918   s37.766,84.361,84.357,84.361h305.122h32.736h6.401c46.055,0,83.385-37.335,83.385-83.383   C512,151.841,474.671,114.51,428.615,114.51z")
+      .style("fill", "#9FDEF7")
+    }
+
+    var plot_single_droplet= function(g_name) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (" + (.0000002 * (svg_height * svg_width / 2)) + "," + (.0000002 * (svg_height * svg_width / 2)) + ") translate (-250, -250)")
+
+      inner_image.append("path")
+      .attr("d", "M118.607,215.185c-0.608-36.408,28.722-66.112,64.991-66.112c0.493,0,0.98,0.026,1.471,0.037  c5.257-32.388,24.424-60.094,51.158-76.836c-17.198-10.775-37.531-17.009-59.322-17.009c-55.652,0-101.796,40.632-110.434,93.845  c-0.491-0.011-0.977-0.037-1.471-0.037c-36.269,0-65.599,29.704-64.991,66.112c0.595,35.64,30.416,63.889,66.061,63.889h118.598  C149.022,279.074,119.202,250.825,118.607,215.185z")
+      .style("fill", "#65AAFC")
+
+      inner_image.append("path")
+      .attr("d", "M176.905,55.266c-55.652,0-101.795,40.632-110.434,93.845c-0.49-0.011-0.977-0.037-1.471-0.037  c-36.268,0-65.599,29.704-64.991,66.112c0.595,35.64,30.416,63.889,66.061,63.889h20.467c-35.645,0-65.466-28.249-66.061-63.889  c-0.592-35.432,27.176-64.505,62.095-66.038l-0.004-0.008c0,0,4.233-0.162,5.146-4.272c0.006-0.025,0.013-0.043,0.019-0.068  c9.7-47.792,49.836-84.532,99.307-89.063C183.699,55.436,180.323,55.266,176.905,55.266z")
+      .style("fill", "#2E84FF")
+
+      inner_image.append("path")
+      .attr("d", "M426.966,98.268c-11.958-0.707-23.438,0.932-34.049,4.472c-3.342,1.115-6.988-0.155-9.112-2.965  c-20.427-27.035-52.839-44.509-89.335-44.509c-55.652,0-101.796,40.632-110.434,93.845c-0.491-0.011-0.977-0.037-1.471-0.037  c-36.269,0-65.599,29.704-64.991,66.112c0.595,35.64,30.416,63.889,66.061,63.889h237.881c51.297,0,92.624-42.686,90.398-94.475  C509.936,138.563,472.965,100.987,426.966,98.268z")
+      .style("fill", "#AAE8FF")
+
+      inner_image.append("path")
+      .attr("d", "M63.781,401.142c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C66.167,400.245,64.675,400.247,63.781,401.142z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M66.19,439.168c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C69.597,451.047,66.139,445.433,66.19,439.168z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M294.47,55.266c-55.652,0-101.795,40.632-110.434,93.845c-0.49-0.011-0.977-0.037-1.471-0.037  c-36.268,0-65.599,29.704-64.991,66.112c0.595,35.64,30.416,63.889,66.061,63.889h20.467c-35.645,0-65.466-28.249-66.061-63.889  c-0.592-35.432,27.176-64.505,62.095-66.038l-0.004-0.008c0,0,4.233-0.162,5.146-4.272c0.006-0.025,0.013-0.043,0.019-0.068  c9.7-47.792,49.836-84.532,99.307-89.063C301.264,55.436,297.888,55.266,294.47,55.266z")
+      .style("fill", "#6BD9FC")
+
+      inner_image.append("path")
+      .attr("d", "M177.203,401.142c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C179.589,400.245,178.097,400.247,177.203,401.142z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M179.612,439.168c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C183.019,451.047,179.561,445.433,179.612,439.168z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M290.625,401.142c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C293.01,400.245,291.519,400.247,290.625,401.142z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M293.034,439.168c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C296.441,451.047,292.983,445.433,293.034,439.168z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M404.047,401.142c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C406.432,400.245,404.941,400.247,404.047,401.142z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M406.455,439.168c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.845,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C409.862,451.047,406.405,445.433,406.455,439.168z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M120.132,323.117c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C122.518,322.221,121.026,322.222,120.132,323.117z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M122.541,361.143c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C125.948,373.022,122.49,367.408,122.541,361.143z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M233.554,323.117c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C235.939,322.221,234.448,322.222,233.554,323.117z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M235.963,361.143c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C239.37,373.022,235.912,367.408,235.963,361.143z")
+      .style("fill", "#49B5CE")
+
+      inner_image.append("path")
+      .attr("d", "M346.976,323.117c-4.381,4.387-16.035,17.933-16.198,38.027c-0.077,9.475,7.844,17.497,17.706,17.566  c9.914,0.069,17.973-7.631,17.973-17.14c0-20.33-11.79-34.037-16.201-38.454C349.361,322.221,347.87,322.222,346.976,323.117z")
+      .style("fill", "#6EDCF9")
+
+      inner_image.append("path")
+      .attr("d", "M349.384,361.143c0.097-11.948,4.257-21.58,8.534-28.349c-2.917-4.615-5.888-7.901-7.664-9.679  c-0.894-0.895-2.386-0.894-3.279,0.001c-4.381,4.387-16.036,17.933-16.198,38.027c-0.077,9.475,7.845,17.497,17.706,17.566  c3.49,0.024,6.74-0.93,9.5-2.572C352.791,373.022,349.334,367.408,349.384,361.143z")
+      .style("fill", "#49B5CE")
+    }
+
+    var create_small_snowflakes= function(number_droplets, g_name) {
+      if (number_droplets > 0) {
+        var cloud_1= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 10.5) + ", " + (svg_height / 2.8) + ")")
+
+        plot_single_snow_cloud(cloud_1)
+      }
+      if (number_droplets > 1) {
+        var cloud_2= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 35) + ", " + (svg_height / 6) + ")")
+
+        plot_single_snow_cloud(cloud_2)
+      }
+      if (number_droplets > 2) {
+        var cloud_3= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 10) + ", " + (svg_height / 5) + ")")
+
+        plot_single_snow_cloud(cloud_3)
+      }
+      if (number_droplets > 3) {
+        var cloud_4= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 30) + ", " + (svg_height / 2.65) + ")")
+
+        plot_single_snow_cloud(cloud_4)
+      }
+      if (number_droplets > 4) {
+        var cloud_5= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 13) + ", " + (svg_height / 11) + ")")
+
+        plot_single_snow_cloud(cloud_5)
+      }
+    }
+
+    var create_small_droplets= function(number_droplets, g_name) {
+      if (number_droplets > 0) {
+        var cloud_1= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 10.5) + ", " + (svg_height / 2.8) + ")")
+
+        plot_single_droplet(cloud_1)
+      }
+      if (number_droplets > 1) {
+        var cloud_2= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 35) + ", " + (svg_height / 6) + ")")
+
+        plot_single_droplet(cloud_2)
+      }
+      if (number_droplets > 2) {
+        var cloud_3= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 10) + ", " + (svg_height / 5) + ")")
+
+        plot_single_droplet(cloud_3)
+      }
+      if (number_droplets > 3) {
+        var cloud_4= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 30) + ", " + (svg_height / 2.65) + ")")
+
+        plot_single_droplet(cloud_4)
+      }
+      if (number_droplets > 4) {
+        var cloud_5= g_name.append("g")
+        .attr("transform", "translate (" + (svg_width / 13) + ", " + (svg_height / 11) + ")")
+
+        plot_single_droplet(cloud_5)
+      }
+    }
+
+    var create_large_droplet= function(g_name) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (.00000001, .00000001) translate (-258, -280)")
+
+      inner_image.append("path")
+      .attr("d", "M438.4,329.6C438.4,430.933,356.267,512,256,512S73.6,430.933,73.6,329.6S256,0,256,0  S438.4,229.333,438.4,329.6z")
+      .style("fill", "#84DBFF")
+
+      inner_image.append("path")
+      .attr("d", "M256,464c-73.6,0-134.4-59.733-134.4-134.4c0-8.533,7.467-16,16-16s16,7.467,16,16  c0,56.533,45.867,102.4,102.4,102.4c8.533,0,16,7.467,16,16S264.533,464,256,464z")
+      .style("fill", "#FFFFFF")
+    }
+
+    var create_large_snowflake= function(g_name) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (.00000001, .00000001) translate (-262, -280)")
+
+      inner_image.append("path")
+      .attr("d", "M258.861,143.781c-3.206,0-6.41-0.994-9.127-2.983l-49.584-36.297   c-6.887-5.042-8.383-14.71-3.341-21.597c5.041-6.888,14.709-8.383,21.597-3.341l40.456,29.616l40.456-29.616   c6.889-5.041,16.556-3.544,21.597,3.341c5.042,6.887,3.545,16.555-3.341,21.597l-49.585,36.297   C265.271,142.787,262.066,143.781,258.861,143.781z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M196.808,429.097c-5.042-6.887-3.545-16.555,3.341-21.597l49.584-36.298   c5.434-3.978,12.821-3.978,18.256,0l49.585,36.298c6.887,5.042,8.383,14.71,3.341,21.597c-5.041,6.886-14.711,8.382-21.597,3.341   l-40.456-29.617l-40.456,29.617C208.637,438.911,199.835,433.232,196.808,429.097z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M160.698,200.456c-1.603,2.776-4.066,5.054-7.148,6.413l-56.227,24.792   c-7.809,3.443-16.931-0.096-20.374-7.905c-3.445-7.809,0.095-16.929,7.905-20.374l45.876-20.229l-5.42-49.844   c-0.921-8.486,5.209-16.11,13.692-17.033c8.485-0.923,16.11,5.208,17.033,13.692l6.643,61.091   C163.042,194.406,162.301,197.68,160.698,200.456z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M377.415,395.723c-8.485,0.923-16.11-5.208-17.033-13.692l-6.644-61.091   c-0.727-6.695,2.966-13.093,9.127-15.81l56.228-24.792c7.809-3.443,16.931,0.096,20.374,7.905   c3.443,7.808-0.097,16.931-7.905,20.374l-45.877,20.229l5.421,49.844C391.828,390.385,382.509,395.169,377.415,395.723z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M161.351,312.674c1.603,2.776,2.344,6.048,1.98,9.397l-6.643,61.09   c-0.923,8.485-8.548,14.614-17.033,13.692c-8.485-0.921-14.614-8.547-13.692-17.033l5.42-49.844l-45.876-20.229   c-7.809-3.445-11.347-12.566-7.905-20.374c3.443-7.809,12.565-11.348,20.374-7.905l56.227,24.792   C157.284,307.62,159.748,309.899,161.351,312.674z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M438.816,222.626c-3.443,7.809-12.565,11.347-20.374,7.905l-56.227-24.791   c-6.163-2.718-9.856-9.114-9.127-15.81l6.644-61.091c0.923-8.485,8.548-14.614,17.033-13.692   c8.484,0.923,14.614,8.549,13.692,17.033l-5.421,49.845l45.877,20.228C441.399,207.474,440.883,217.937,438.816,222.626z")
+      .style("fill", "#73B7DD")
+
+      inner_image.append("path")
+      .attr("d", "M258.861,143.781c3.205,0,6.411-0.995,9.127-2.983l33.384-24.439V78.312   c-0.705,0.364-1.396,0.767-2.055,1.251l-40.456,29.616l-39.902-29.21v38.301l30.775,22.529   C252.451,142.788,255.655,143.781,258.861,143.781z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M249.732,371.202l-32.08,23.484v38.223c0.249-0.15,0.5-0.304,0.751-0.47l40.456-29.617   l40.456,29.617c0.244,0.179,0.5,0.331,0.751,0.493v-38.245l-32.08-23.484C262.554,367.225,255.168,367.225,249.732,371.202z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M160.698,200.456c1.602-2.775,2.344-6.049,1.98-9.396l-4.255-39.125L125.281,132.8   c0.013,0.171,0.011,0.339,0.03,0.51l5.42,49.844l-45.876,20.229c-0.397,0.175-0.774,0.374-1.148,0.577l33.1,19.111l36.743-16.202   C156.633,205.51,159.095,203.232,160.698,200.456z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M391.107,378.69l-5.421-49.844l44.882-19.79l-33.171-19.151l-34.532,15.226   c-6.163,2.718-9.856,9.114-9.127,15.81l4.516,41.528l32.829,18.953C391.151,380.555,391.166,379.648,391.107,378.69z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M161.351,312.674c-1.602-2.775-4.067-5.054-7.148-6.413l-35.27-15.553l-33.17,19.15l45.622,20.116   l-5.42,49.844c-0.074,0.686-0.087,1.363-0.072,2.035l33.01-19.058l4.429-40.724C163.695,318.723,162.954,315.451,161.351,312.674z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M362.215,205.74l38.964,17.179l32.671-18.863c-0.868-0.649-1.839-1.257-2.937-1.803l-45.877-20.228   l5.216-47.961l-33.17,19.151l-3.993,36.716C352.359,196.624,356.052,203.022,362.215,205.74z")
+      .style("fill", "#5E9CD3")
+
+      inner_image.append("path")
+      .attr("d", "M449.291,349.604l-159.525-92.101l159.525-92.102c7.391-4.267,9.923-13.717,5.656-21.108  c-4.267-7.391-13.717-9.926-21.108-5.656l-159.525,92.101V43.522c0-8.534-6.919-15.453-15.453-15.453  c-8.534,0-15.453,6.919-15.453,15.453v187.217L81.274,137.13c-7.393-4.27-16.843-1.736-21.108,5.656  c-4.267,7.392-1.735,16.842,5.656,21.108l162.134,93.607L65.821,351.111c-7.391,4.267-9.923,13.717-5.656,21.108  c2.862,4.958,10.905,10.342,21.108,5.656l162.134-93.608V468.47c0,8.534,6.919,15.453,15.453,15.453  c8.534,0,15.453-6.919,15.453-15.453V284.268l159.525,92.101c10.421,5.827,18.247-0.699,21.108-5.656  C459.214,363.322,456.681,353.871,449.291,349.604z")
+      .style("fill", "#B3DBF4")
+
+      inner_image.append("polygon")
+      .attr("points", "346.029,306.323 362.072,299.249 289.766,257.503 365.031,214.049 346.029,205.669   347.925,188.239 274.314,230.738 274.314,144.032 258.861,155.344 243.408,144.032 243.408,230.739 169.798,188.24 171.693,205.669   152.69,214.049 227.955,257.503 155.651,299.249 171.693,306.323 169.448,326.969 243.408,284.268 243.408,367.961 258.861,356.649   274.314,367.961 274.314,284.268 348.274,326.969 ")
+      .style("fill", "#94CBED")
+
+      inner_image.append("circle")
+      .attr("cx", 258.866)
+      .attr("cy", 29.01)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("circle")
+      .attr("cx", 258.866)
+      .attr("cy", 482.99)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("circle")
+      .attr("cx", 59.419)
+      .attr("cy", 143.257)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("circle")
+      .attr("cx", 452.581)
+      .attr("cy", 370.247)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("circle")
+      .attr("cx", 59.419)
+      .attr("cy", 371.761)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("circle")
+      .attr("cx", 452.581)
+      .attr("cy", 144.761)
+      .attr("r", 29.01)
+      .style("fill", "#CAE7FC")
+
+      inner_image.append("path")
+      .attr("d", "M210.982,358.117c-3.716,0-7.45-0.98-10.875-2.957c-7.552-4.36-11.658-12.455-10.715-21.124   l4.495-41.333l-38.043-16.774c-7.98-3.518-12.936-11.121-12.936-19.841c0-8.722,4.957-16.324,12.936-19.842l38.043-16.774   l-4.495-41.333c-0.943-8.669,3.163-16.763,10.715-21.124c7.553-4.36,16.616-3.87,23.652,1.282l33.548,24.56l33.548-24.56   c7.038-5.15,16.1-5.641,23.652-1.282c7.552,4.36,11.658,12.455,10.715,21.124l-4.495,41.333l38.043,16.774   c7.98,3.518,12.936,11.121,12.936,19.842c0,8.72-4.957,16.323-12.936,19.841l-38.043,16.774l4.495,41.333   c0.943,8.669-3.163,16.763-10.715,21.124c-7.554,4.36-16.616,3.867-23.652-1.283l-33.548-24.558l-33.548,24.558   C219.913,356.693,215.461,358.117,210.982,358.117z M211.024,169.534c-1.515,0-2.709,0.584-3.19,0.862   c-0.825,0.477-3.487,2.323-3.079,6.072l5.107,46.956c0.365,3.348-1.482,6.546-4.564,7.905l-43.218,19.056   c-3.45,1.522-3.718,4.749-3.718,5.703c0,0.953,0.268,4.182,3.718,5.702l43.218,19.056c3.081,1.358,4.928,4.556,4.564,7.905   l-5.107,46.956c-0.408,3.749,2.254,5.595,3.079,6.072c0.824,0.476,3.755,1.858,6.798-0.369l38.112-27.899   c2.718-1.99,6.411-1.99,9.127,0l38.113,27.899c3.043,2.23,5.974,0.846,6.798,0.369c0.825-0.477,3.487-2.323,3.079-6.072   l-5.107-46.956c-0.365-3.348,1.482-6.546,4.564-7.905l43.218-19.056c3.45-1.522,3.718-4.749,3.718-5.702   c0-0.954-0.268-4.183-3.718-5.703l-43.218-19.056c-3.081-1.358-4.928-4.557-4.564-7.905l5.107-46.956   c0.408-3.749-2.254-5.595-3.079-6.072c-0.826-0.477-3.756-1.858-6.798,0.368l-38.112,27.9c-2.718,1.99-6.411,1.99-9.127,0   l-38.112-27.9C213.361,169.835,212.11,169.534,211.024,169.534z")
+      .style("fill", "#CAE7FC")
+    }
+
+    var create_sun= function(g_name) {
+      var inner_image= g_name.append("g")
+      .attr("transform", "scale (.00000002, .00000002) translate (-210, -210)")
+
+      inner_image.append("polygon")
+      .attr("points", "420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211    256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 20.762,301.144 44.226,247.858 0,210    44.226,172.143 20.762,118.855 77.074,104.014 79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789    340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142  ")
+      .style("fill", "#F5C525")
+
+      inner_image.append("circle")
+      .attr("cx", 210)
+      .attr("cy", 210)
+      .attr("r", 140)
+      .style("fill", "#F8A805")
+    }
+
+    var update_weather_image= function(input_array) {
+
+      d3.select("#weather_image").remove();
+
+      var new_svg= d3.select("#div1").append("svg")
+      .attr("id", "weather_image")
+      .attr("height", svg_height)
+      .attr("width", svg_width)
+
+      new_svg.append("line")
+      .attr("x1", svg_width/4)
+      .attr("y1", 0)
+      .attr("x2", svg_width/4)
+      .attr("y2", svg_height)
+      .style("stroke", "black")
+      .style("stroke-width", 1)
+
+      new_svg.append("line")
+      .attr("x1", svg_width/2)
+      .attr("y1", 0)
+      .attr("x2", svg_width/2)
+      .attr("y2", svg_height)
+      .style("stroke", "black")
+      .style("stroke-width", 1)
+
+      new_svg.append("line")
+      .attr("x1", 3 * svg_width/4)
+      .attr("y1", 0)
+      .attr("x2", 3 * svg_width/4)
+      .attr("y2", svg_height)
+      .style("stroke", "black")
+      .style("stroke-width", 1)
+
+      var winter_barn= new_svg.append("g")
+      .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 2) + ")")
+
+      plot_barn(winter_barn, "winter")
+
+      var spring_barn= new_svg.append("g")
+      .attr("transform", "translate (" + (5 * svg_width / 16) + ", " + (svg_height / 2) + ")")
+
+      plot_barn(spring_barn, "spring")
+
+      var summer_barn= new_svg.append("g")
+      .attr("transform", "translate (" + (9 * svg_width / 16) + ", " + (svg_height / 2) + ")")
+
+      plot_barn(summer_barn, "summer")
+
+      var fall_barn= new_svg.append("g")
+      .attr("transform", "translate (" + (13 * svg_width / 16) + ", " + (svg_height / 2) + ")")
+
+      plot_barn(fall_barn, "fall")
+
+      //winter, first pane
+      var winter= new_svg.append("g")
+
+      //large water droplet
+      var winter_total_rain= winter.append("g")
+      .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+      var winter_total_rain_image= winter_total_rain.append("g")
+      .attr("transform", "scale(" + (total_rain_scale_final(input_array[1]) * (svg_height * svg_width / 2)) + ", " + (total_rain_scale_final(input_array[1]) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_snowflake(winter_total_rain_image)
+
+      //multiple winter drops
+      create_small_snowflakes(rainy_day_quantile(input_array[0]), winter)
+
+      //sun icon
+      var winter_avg_temp= winter.append("g")
+      .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+      var winter_avg_temp_image= winter_avg_temp.append("g")
+      .attr("transform", "scale(" + (avg_temp_scale_final(input_array[2]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[2]) * (svg_height * svg_width / 2)) + ")")
+
+      create_sun(winter_avg_temp_image)
+
+      //SAME FOR THE REST OF THE SEASONS
+      var spring= new_svg.append("g")
+      .attr("transform", "translate (" + (svg_width / 4) + ", 0)")
+
+      var spring_total_rain= spring.append("g")
+      .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+      var spring_total_rain_image= spring_total_rain.append("g")
+      .attr("transform", "scale(" + (total_rain_scale_final(input_array[4]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[4]) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(spring_total_rain_image)
+
+      create_small_droplets(rainy_day_quantile(input_array[3]), spring)
+
+      var spring_avg_temp= spring.append("g")
+      .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+      var spring_avg_temp_image= spring_avg_temp.append("g")
+      .attr("transform", "scale(" + (avg_temp_scale_final(input_array[5]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[5]) * (svg_height * svg_width / 2)) + ")")
+
+      create_sun(spring_avg_temp_image)
+
+      var summer= new_svg.append("g")
+      .attr("transform", "translate (" + (svg_width / 2) + ", 0)")
+
+      var summer_total_rain= summer.append("g")
+      .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+      var summer_total_rain_image= summer_total_rain.append("g")
+      .attr("transform", "scale(" + (total_rain_scale_final(input_array[7]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[7]) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(summer_total_rain_image)
+
+      create_small_droplets(rainy_day_quantile(input_array[6]), summer)
+
+      var summer_avg_temp= summer.append("g")
+      .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+      var summer_avg_temp_image= summer_avg_temp.append("g")
+      .attr("transform", "scale(" + (avg_temp_scale_final(input_array[8]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[8]) * (svg_height * svg_width / 2)) + ")")
+
+      create_sun(summer_avg_temp_image)
+
+      var fall= new_svg.append("g")
+      .attr("transform", "translate (" + (3 * svg_width / 4) + ", 0)")
+
+      var fall_total_rain= fall.append("g")
+      .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+      var fall_total_rain_image= fall_total_rain.append("g")
+      .attr("transform", "scale(" + (total_rain_scale_final(input_array[10]) * (svg_height * svg_width / 2))  + ", " + (total_rain_scale_final(input_array[10]) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(fall_total_rain_image)
+
+      create_small_droplets(rainy_day_quantile(input_array[9]), fall)
+
+      var fall_avg_temp= fall.append("g")
+      .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+
+      var fall_avg_temp_image= fall_avg_temp.append("g")
+      .attr("transform", "scale(" + (avg_temp_scale_final(input_array[11]) * (svg_height * svg_width / 2)) + ", " + (avg_temp_scale_final(input_array[11]) * (svg_height * svg_width / 2)) + ")")
+
+      create_sun(fall_avg_temp_image)
+    }
+
+    var create_key= function() {
+
+      var new_svg= d3.select("#div2").append("svg")
+      .attr("id", "key")
+      .attr("height", svg_height)
+      .attr("width", svg_width)
+
+      var droplet= new_svg.append("g")
+      .attr("transform", "translate (50, 50)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(1) * (svg_height * svg_width / 2)) + ", " + (resizing(1) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(2) * (svg_height * svg_width / 2)) + ", " + (resizing(2) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(3) * (svg_height * svg_width / 2)) + ", " + (resizing(3) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(4) * (svg_height * svg_width / 2)) + ", " + (resizing(4) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(5) * (svg_height * svg_width / 2)) + ", " + (resizing(5) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(6) * (svg_height * svg_width / 2)) + ", " + (resizing(6) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(7) * (svg_height * svg_width / 2)) + ", " + (resizing(7) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(8) * (svg_height * svg_width / 2)) + ", " + (resizing(8) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(9) * (svg_height * svg_width / 2)) + ", " + (resizing(9) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+
+      var droplet= droplet.append("g")
+      .attr("transform", "translate (50, 0)")
+
+      var droplet_image= droplet.append("g")
+      .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+
+      create_large_droplet(droplet_image)
+    }
+
+    </script>
+
+    <!-- -----------------------------SCALE WINE DATA---------------------------------------- -->
+
+<script>
+//Svg Dimensions
+var svg_height_1= 600
+var svg_width_1= 400
+
+//Placeholder empty svg
+d3.select("#wine").append("svg")
+.attr("id", "wine_image")
+.attr("height", svg_height_1)
+.attr("width", svg_width_1)
+
+var wine_height=70
+
+var wine_vintage_scale= d3.scaleLinear()
+.domain([80, 100])
+.range([0, 200])
+
+var image_scale_size= function(height, width) {
+  return (height * width / 2 * 0.000003)
+}
+
+var wine_color= function(varietal) {
+  if (varietal == "Chardonnay") {return "#F0EE5A"}
+  else if (varietal == "Pinot Noir") {return "#DE2F2F"}
+  else {return "#790B0B"}
+}
+
+var vintage_rating= function(varietal, data) {
+  if (varietal == "Chardonnay") {return data.Chardonnay}
+  else if (varietal == "Pinot_Noir") {return data.Pinot_Noir}
+  else {return data.Rhone_Style_reds}
+}
+
+var wine_varietal_to_string= function(varietal) {
+  if (varietal == "Chardonnay") {return "Chardonnay"}
+  else if (varietal == "Pinot_Noir") {return "Pinot Noir"}
+  else {return "Rhone Styled Reds"}
+}
+
+var glass_maker= function(g_name, varietal, data) {
+  var inner_image= g_name.append("g")
+  .attr("transform", "scale ( " + image_scale_size(svg_height_1, svg_width_1) + ", " + image_scale_size(svg_height_1, svg_width_1) + ")")
+
+  var stem= inner_image.append("g")
+  .attr("transform", "scale (8, 8) translate (-28, -27)")
+
+  stem.append("ellipse")
+  .attr("cx", 28)
+  .attr("cy", 53)
+  .attr("rx", 11)
+  .attr("ry", 2.5)
+  .style("fill", "#DAE7EF")
+
+  stem.append("path")
+  .attr("d", "M28,56c-3.978,0-11.5-0.627-11.5-3s7.522-3,11.5-3s11.5,0.627,11.5,3S31.978,56,28,56z M28,51    c-6.794,0-10.5,1.321-10.5,2s3.706,2,10.5,2s10.5-1.321,10.5-2S34.794,51,28,51z")
+  .style("fill", "#BBD7EA")
+
+  stem.append("path")
+  .attr("d", "M28,52.5c-0.552,0-1-0.447-1-1V35.359c0-0.553,0.448-1,1-1s1,0.447,1,1V51.5   C29,52.053,28.552,52.5,28,52.5z")
+  .style("fill", "#BBD7EA")
+
+  inner_image.append("text")
+  .text(varietal)
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("y", -240)
+  .attr("font-size", 50)
+
+  inner_image.append("ellipse")
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("rx", 100)
+  .attr("ry", 60)
+  .style("fill", wine_color(varietal))
+  .style("stroke", "#BBD7EA")
+  .style("stroke-width", 12)
+
+  inner_image.append("polygon")
+  .attr("points", "-100,0 -100,-200 100,-200 100,0")
+  .style("stroke-width", 12)
+  .style("stroke", "#BBD7EA")
+  .style("fill", "white")
+
+  inner_image.append("line")
+  .attr("x1", -94)
+  .attr("y1", 0)
+  .attr("x2", 94)
+  .attr("y2", 0)
+  .style("stroke-width", 13)
+  .style("stroke", wine_color(varietal))
+
+  inner_image.append("polygon")
+  .attr("points", "-94,0 -94," + (-1 * wine_vintage_scale(data)) + " 94," + (-1 * wine_vintage_scale(data)) + " 94,0")
+  .style("fill", wine_color(varietal))
+
+  inner_image.append("text")
+  .text(data)
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("y", -70)
+  .attr("font-size", 100)
+}
+
+var update_wine_image= function(input_data) {
+
+  d3.select("#wine_image").remove();
+
+  var new_svg= d3.select("#wine").append("svg")
+  .attr("id", "wine_image")
+  .attr("height", svg_height_1)
+  .attr("width", svg_width_1)
+
+  if (input_data.non_null.length == 3) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 5) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+
+    var varietal_2= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 2) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_2, wine_varietal_to_string(input_data.non_null[1]), vintage_rating(input_data.non_null[1], input_data))
+
+    var varietal_3= new_svg.append("g")
+    .attr("transform", "translate (" + (4 * svg_width_1 / 5) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_3, wine_varietal_to_string(input_data.non_null[2]), vintage_rating(input_data.non_null[2], input_data))
+
+    var svg= d3.select("#wine_image")
+
+    svg.append("rect")
+    .attr("x", 100)
+    .attr("y", 100)
+    .attr("height", 200)
+    .attr("width", 200)
+    .style("fill", "none")
+
+    svg.append("text")
+    .text("hello there, this is a very very very long string for testing purposes")
+    .attr("id", "txtwrap")
+    .attr("x", 100)
+    .attr("y", 100)
+
+    d3plus.textwrap()
+    .container(d3.select("#txtwrap"))
+    .resize(true)
+    .draw();
+
+    // var textbox= new_svg.append("g")
+    // .attr("transform", "translate (" + 0 + ", " + (svg_height_1/2) + ")")
+    //
+    // textbox.append("rect")
+    // .attr("id", "txtwrap")
+    // .attr("x", 0)
+    // .attr("y", 0)
+    // .attr("height", (svg_height_1/2))
+    // .attr("width", svg_width_1)
+    // .style("fill", "none")
+    //
+    // textbox.append("text")
+    // .text(input_data.Comment)
+    // .attr("id", "txtwrap1")
+    // .attr("x",0)
+    // .attr("y",0)
+    //
+    // d3plus.textwrap()
+    // .container(d3.select("#txtwrap"))
+    // .resize(true)
+    // .draw();
+  }
+
+  else if (input_data.non_null.length == 2) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 4) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+
+    var varietal_2= new_svg.append("g")
+    .attr("transform", "translate (" + (3 * svg_width_1 / 4) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_2, wine_varietal_to_string(input_data.non_null[1]), vintage_rating(input_data.non_null[1], input_data))
+  }
+
+  else if (input_data.non_null.length == 1) {
+    var varietal_1= new_svg.append("g")
+    .attr("transform", "translate (" + (svg_width_1 / 2) + ", " + (svg_height_1 / 3) + ")")
+
+    glass_maker(varietal_1, wine_varietal_to_string(input_data.non_null[0]), vintage_rating(input_data.non_null[0], input_data))
+  }
+
+//Update description:
+  document.getElementById('comment').innerHTML = input_data.Comment;
+}
+
+//create_key()
+
+var horizontalspace= 80
+var verticalspace= 50
+
+var create_key_2= function() {
+
+  var svg= d3.select("#key").append("svg")
+  .attr("id", "key")
+  .attr("height", 420)
+  .attr("width", 800)
+
+  var example_barn= svg.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 2) + ")")
+
+  plot_barn(example_barn, "summer")
+
+  var winter= svg.append("g")
+
+  //large water droplet
+  var winter_total_rain= winter.append("g")
+  .attr("transform", "translate (" + (svg_width / 16) + ", " + (svg_height / 4) + ")")
+
+  var winter_total_rain_image= winter_total_rain.append("g")
+  .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+
+  create_large_droplet(winter_total_rain_image)
+
+  // //multiple winter drops
+  create_small_droplets(5, winter)
+  //
+  // //sun icon
+  var winter_avg_temp= winter.append("g")
+  .attr("transform", "translate (" + (3 * svg_width / 16) + ", " + (svg_height / 6) + ")")
+  //
+  var winter_avg_temp_image= winter_avg_temp.append("g")
+  .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+  //
+  create_sun(winter_avg_temp_image)
+  //
+  var new_svg= svg.append("g")
+  .attr("transform", "translate (360, 0)")
+
+  var droplet= new_svg.append("g")
+  .attr("transform", "translate (" + horizontalspace + ", " + verticalspace + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(1) * (svg_height * svg_width / 2)) + ", " + (resizing(1) * (svg_height * svg_width / 2)) + ")")
+
+  create_large_droplet(droplet_image)
+
+  droplet.append("text")
+  .text("0.00")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  // var droplet_image= droplet.append("g")
+  // .attr("transform", "scale(" + (resizing(5.5) * (svg_height * svg_width / 2)) + ", " + (resizing(5.5) * (svg_height * svg_width / 2)) + ")")
+  //
+  // create_large_droplet(droplet_image)
+
+  droplet.append("text")
+  .text("Avg Rain per Rainy Day (in)")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+
+  create_large_droplet(droplet_image)
+
+  droplet.append("text")
+  .text("1.19")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
+  //Snowflake
+  var droplet= new_svg.append("g")
+  .attr("transform", "translate (" + horizontalspace + ", " + (3 * verticalspace) + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(1) * (svg_height * svg_width / 2)) + ", " + (resizing(1) * (svg_height * svg_width / 2)) + ")")
+
+  create_large_snowflake(droplet_image)
+
+  droplet.append("text")
+  .text("0")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  droplet.append("text")
+  .text("Avg Precip per Rainy Day (in)")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+
+  // var droplet_image= droplet.append("g")
+  // .attr("transform", "scale(" + (resizing(5.5) * (svg_height * svg_width / 2)) + ", " + (resizing(5.5) * (svg_height * svg_width / 2)) + ")")
+  //
+  // create_large_snowflake(droplet_image)
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+
+  create_large_snowflake(droplet_image)
+
+  droplet.append("text")
+  .text("1.19")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 38)")
+
+  //clusters
+  var droplet= new_svg.append("g")
+  .attr("transform", "translate (" + 0 + ", " + (4 * verticalspace) + ")")
+
+  droplet.append("text")
+  .text("1")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(80, 90)")
+
+  droplet.append("text")
+  .text("53")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(337, 90)")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "scale (.5, .5) translate (" + (.3 * horizontalspace) + ", " + 0 + ")")
+
+
+  create_small_droplets(1, droplet)
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (3 * horizontalspace) + ", " + 0 + ")")
+
+  // create_small_droplets(3, droplet)
+
+  droplet.append("text")
+  .text("Rainy Days")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "scale(2, 2) translate(70, 55)")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (4 * horizontalspace) + ", " + 0 + ")")
+
+  create_small_droplets(5, droplet)
+
+  //sun
+  var droplet= new_svg.append("g")
+  .attr("transform", "translate (" + horizontalspace + ", " + (7 * verticalspace) + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(1) * (svg_height * svg_width / 2)) + ", " + (resizing(1) * (svg_height * svg_width / 2)) + ")")
+
+  create_sun(droplet_image)
+
+  droplet.append("text")
+  .text("43")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 50)")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  // var droplet_image= droplet.append("g")
+  // .attr("transform", "scale(" + (resizing(5.5) * (svg_height * svg_width / 2)) + ", " + (resizing(5.5) * (svg_height * svg_width / 2)) + ")")
+  //
+  // create_sun(droplet_image)
+
+  droplet.append("text")
+  .text("Avg Temperature (F)")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+
+  var droplet= droplet.append("g")
+  .attr("transform", "translate (" + (1.6 * horizontalspace) + ", " + 0 + ")")
+
+  var droplet_image= droplet.append("g")
+  .attr("transform", "scale(" + (resizing(10) * (svg_height * svg_width / 2)) + ", " + (resizing(10) * (svg_height * svg_width / 2)) + ")")
+
+  create_sun(droplet_image)
+
+  droplet.append("text")
+  .text("76")
+  .attr("text-anchor", "middle")
+  .attr("alignment-baseline", "middle")
+  .attr("transform", "translate(0, 50)")
+
+  svg.append("line")
+  .attr("x1", 93)
+  .attr("y1", 95)
+  .attr("x2", 420)
+  .attr("y2", 50)
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("line")
+  .attr("x1", 93)
+  .attr("y1", 95)
+  .attr("x2", 420)
+  .attr("y2", 148)
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("circle")
+  .attr("cx", 93)
+  .attr("cy", 95)
+  .attr("r", 35)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "red")
+
+  svg.append("circle")
+  .attr("cx", 280)
+  .attr("cy", 65)
+  .attr("r", 55)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "purple")
+
+  svg.append("line")
+  .attr("x1", 280)
+  .attr("y1", 65)
+  .attr("x2", 420)
+  .attr("y2", 355)
+  .style("stroke-width", 2)
+  .style("stroke", "purple")
+
+  svg.append("circle")
+  .attr("cx", 142)
+  .attr("cy", 142)
+  .attr("r", 25)
+  .style("fill", "none")
+  .style("stroke-width", 2)
+  .style("stroke", "blue")
+
+  svg.append("line")
+  .attr("x1", 142)
+  .attr("y1", 142)
+  .attr("x2", 420)
+  .attr("y2", 268)
+  .style("stroke-width", 2)
+  .style("stroke", "blue")
+}
+create_key_2()
+
+    </script>
+
+</body>
